@@ -4,7 +4,7 @@
 
 Author: Ivo Georgiev, PhD  
 Last updated: 2020-02-22  
-Code:   
+Code: 98ffb5e9c5964e27028001933faec10caa0e4709  
 
 This is assignment 5 for the Spring 2020 installment of the CPE 1040 - Intro to Computer Engineering course at MSU Denver.
 
