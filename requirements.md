@@ -51,6 +51,9 @@ This assignment introduces transistors and electrical circuits that employ them.
 
 ### Transistors
 **(TODO)**
+1. pnp datasheet
+2. npn datasheet
+3. circuit video
 
 ### Sensors
 
