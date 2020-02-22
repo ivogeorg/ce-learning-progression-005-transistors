@@ -93,5 +93,3 @@ This assignment introduces transistors and electrical circuits that employ them.
 
 7. The most authoritative JS resource on the Web, including tutorials and reference, by [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
 
----
-
