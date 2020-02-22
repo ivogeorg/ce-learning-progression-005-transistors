@@ -6,6 +6,8 @@ Author: Ivo Georgiev, PhD
 Last updated: 2020-02-22  
 Code: 98ffb5e9c5964e27028001933faec10caa0e4709  
 
+---
+
 _**NOTE:** This assignment [README](README.md) is _intentionally_ blank. It is part of the assignment to fill it. Refer to the [submission template](submission-template.md) for expectations and guidance. Read the [requirements](requirements.md) and [criteria](criteria.md) for the assignment proper._
 
 
@@ -20,4 +22,4 @@ _**NOTE:** This assignment [README](README.md) is _intentionally_ blank. It is p
                                                                                                                             
                                                                                                                             
 ```
-Art acknowledgement: [TAAG](http://patorjk.com/software/taag/)
+Art acknowledgement: [taag](http://patorjk.com/software/taag/)
