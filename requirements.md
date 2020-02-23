@@ -16,6 +16,8 @@ This assignment introduces transistors and electrical circuits that employ them.
 
 1. **(TODO)** pnp/npn transistor circuits with LEDs and switches at the base
 
+[s2019 lab3](https://docs.google.com/document/d/13pFJS0aYvVAIBDg0BmGHPTw53Ueia28oXwdEoWX3228/edit#)
+
 2. Soil sensor **(TODO): Divide into two, namely, manual calibration and auto-calibration.**:
    1. Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is _pressed_). _Note: Do you need an external or internal [pullup resistor](https://www.google.com/search?q=pullup+pulldown+resistor&oq=pullup+pull)?_ Commit the JavaScript file to your assignment repository, calling it `digital-in.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
    2. Hook up the soil moisture sensor. There are three wires coming out: VCC, GND, and SIG. Pick a GPIO pin, configure it as digital output, and wire VCC to it. Pick a GPIO pin, configure it as analog in, and wire SIG to it. GND whould be wired to ground on the micro:bit.
@@ -50,7 +52,7 @@ This assignment introduces transistors and electrical circuits that employ them.
 5. micro:bit [technical documentation](https://tech.microbit.org/).
 
 ### Transistors
-(TODO: transistor operation videos - f2019 w4 resources)
+(TODO: transistor operation videos - s2019 w4 resources)
 1. NPN transistor [2N3904 datasheet](https://www.sparkfun.com/datasheets/Components/2N3904.pdf)
 2. PNP Transistor [2N3906 datasheet](https://www.sparkfun.com/datasheets/Components/2N3906.pdf)
 3. Video [NPN vs. PNP Transistors as Common-Emitter Switches](https://www.youtube.com/watch?v=kNVaIqmKUoI)
