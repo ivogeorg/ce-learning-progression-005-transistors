@@ -50,10 +50,10 @@ This assignment introduces transistors and electrical circuits that employ them.
 5. micro:bit [technical documentation](https://tech.microbit.org/).
 
 ### Transistors
-**(TODO)**
-1. pnp datasheet
-2. npn datasheet
-3. circuit video
+(TODO: transistor operation videos - f2019 w4 resources)
+1. NPN transistor [2N3904 datasheet](https://www.sparkfun.com/datasheets/Components/2N3904.pdf)
+2. PNP Transistor [2N3906 datasheet](https://www.sparkfun.com/datasheets/Components/2N3906.pdf)
+3. Video [NPN vs. PNP Transistors as Common-Emitter Switches](https://www.youtube.com/watch?v=kNVaIqmKUoI)
 
 ### Sensors
 
