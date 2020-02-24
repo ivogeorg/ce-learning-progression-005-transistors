@@ -40,6 +40,8 @@ This assignment introduces transistors and electrical circuits that employ them.
 1. Pick a [2N3906](https://www.sparkfun.com/datasheets/Components/2N3906.pdf) transistor and build the circuit on the right. _Does the LED light up when the switch is on or off? Explain._
 2. Repeat all the measurements, answer the current questions from part (1), and the drawing for the pnp curcuit.
 
+![alt text](images/soil-sensor-kit.jpg "Soil Sensor Kit with micro:bit Breakout and Breadboard")
+
 ##### 3. Soil sensor
 
 1. Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is _pressed_). _Note: Do you need an external or internal [pullup resistor](https://www.google.com/search?q=pullup+pulldown+resistor&oq=pullup+pull)?_ Commit the JavaScript file to your assignment repository, calling it `digital-in.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
