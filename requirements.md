@@ -14,6 +14,8 @@ This assignment introduces transistors and electrical circuits that employ them.
 
 #### Requirements
 
+![alt text](images/npn-pnp-circuits.jpg "Simple Circuits with NPN and PNP Transistors")
+
 ##### 1. NPN transistor circuit
 
 1. Pick a [2N3904](https://www.sparkfun.com/datasheets/Components/2N3904.pdf) transistor and build the circuit on the left. 
