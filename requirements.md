@@ -40,6 +40,8 @@ This assignment introduces transistors and electrical circuits that employ them.
 1. Pick a [2N3906](https://www.sparkfun.com/datasheets/Components/2N3906.pdf) transistor and build the circuit on the right. _Does the LED light up when the switch is on or off? Explain._
 2. Repeat all the measurements, answer the current questions from part (1), and the drawing for the pnp curcuit.
 
+TODO: add gain calculation
+
 ![alt text](images/soil-sensor-kit.jpg "Soil Sensor Kit with micro:bit Breakout and Breadboard")
 
 ##### 3. Soil sensor
