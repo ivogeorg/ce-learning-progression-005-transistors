@@ -99,12 +99,16 @@ The soil moisture sensor is a transistor-based device to measure the moisture of
 6. micro:bit [reference](https://makecode.microbit.org/reference/), and [pins](https://makecode.microbit.org/reference/pins/servo-set-pulse), specifically.
 
 ### Transistors
-(TODO: transistor operation videos - s2019 w4 resources)
-1. Video of [PN diode operation](https://www.youtube.com/watch?v=-SSkjWuUri4)
-2. Video of [NPN and PNP transistor operation](https://www.youtube.com/watch?v=R0Uy4EL4xWs)
-3. NPN transistor [2N3904 datasheet](https://www.sparkfun.com/datasheets/Components/2N3904.pdf)
-4. PNP Transistor [2N3906 datasheet](https://www.sparkfun.com/datasheets/Components/2N3906.pdf)
-5. Video [NPN vs. PNP Transistors as Common-Emitter Switches](https://www.youtube.com/watch?v=kNVaIqmKUoI)
+1. Video of [transistor operation](https://www.youtube.com/watch?v=7ukDKVHnac4)
+2. Video of [PN diode operation](https://www.youtube.com/watch?v=-SSkjWuUri4)
+3. Video of [NPN and PNP transistor operation](https://www.youtube.com/watch?v=R0Uy4EL4xWs)
+4. Video of [NPN vs. PNP Transistors as Common-Emitter Switches](https://www.youtube.com/watch?v=kNVaIqmKUoI)
+5. Video of [MOSFET operation](https://www.youtube.com/watch?v=stM8dgcY1CA)
+
+#### Datasheets
+
+1. NPN transistor [2N3904 datasheet](https://www.sparkfun.com/datasheets/Components/2N3904.pdf)
+2. PNP Transistor [2N3906 datasheet](https://www.sparkfun.com/datasheets/Components/2N3906.pdf)
 
 ### Sensors
 
