@@ -103,7 +103,9 @@ The soil moisture sensor is a transistor-based device to measure the moisture of
 2. Video of [PN diode operation](https://www.youtube.com/watch?v=-SSkjWuUri4)
 3. Video of [NPN and PNP transistor operation](https://www.youtube.com/watch?v=R0Uy4EL4xWs)
 4. Video of [NPN vs. PNP Transistors as Common-Emitter Switches](https://www.youtube.com/watch?v=kNVaIqmKUoI)
-5. Video of [MOSFET operation](https://www.youtube.com/watch?v=stM8dgcY1CA)
+5. Video of [semiconductor operation](https://www.youtube.com/watch?v=33vbFFFn04k) by Ben Eater.
+6. Video of [transistor operation](https://www.youtube.com/watch?v=DXvAlwMAxiA) by Ben Eater.
+7. Video of [MOSFET operation](https://www.youtube.com/watch?v=stM8dgcY1CA)
 
 #### Datasheets
 
