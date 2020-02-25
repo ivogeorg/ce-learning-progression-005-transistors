@@ -19,7 +19,7 @@ This assignment introduces transistors and electrical circuits that employ them.
 ##### 1. NPN transistor circuit
 
 1. Pick a [2N3904](https://www.sparkfun.com/datasheets/Components/2N3904.pdf) transistor and build the npn circuit on the left. 
-2. For a switch, use one of the workstation switches on the left of the breadboard area. Make sure they are in the CMOS (that is 5V) mode. _Hint: The switch is already connected to 5V and 0V and toggles between them. You only need to bring a wire from it to the base resistor._
+2. For a switch, use one of the workstation switches on the left of the breadboard area. Make sure they are in the CMOS (that is 5V) mode. _Hint: The switch is already connected to 5V and 0V and toggles between them. You only need to bring a wire from it to the base resistor._ (UPDATE: This is not true. The switches are 1V when on, which is insufficient for the setup in the circuit sketch. See the [correction guide](correction-guide.md) for details.)
 3. With the switch off, measure the voltages:
    1. Accross the resistor R<sub>C</sub>.
    2. At the collector (C).
