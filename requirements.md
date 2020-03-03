@@ -19,7 +19,7 @@ This assignment introduces transistors and electrical circuits that employ them.
 ##### 1. NPN transistor circuit
 
 1. Pick a [2N3904](https://www.sparkfun.com/datasheets/Components/2N3904.pdf) transistor and build the npn circuit on the left. 
-2. For a switch, use one of the workstation switches on the left of the breadboard area. Make sure they are in the CMOS (that is 5V) mode. _Hint: The switch is already connected to 5V and 0V and toggles between them. You only need to bring a wire from it to the base resistor._ (UPDATE: This is not true. The switches are 1V when on, which is insufficient for the setup in the circuit sketch. See the [correction guide](correction-guide.md) for details.)
+2. For a switch, use one of the workstation switches on the left of the breadboard area. Make sure they are in the CMOS (that is 5V) mode. _Hint: The switch is already connected to 5V and 0V and toggles between them. You only need to bring a wire from it to the base resistor._ (UPDATE: This is not true. The switches are 1V when on, which is insufficient for the setup in the circuit sketch. See the [asst 5 errata](asst5-errata.md#item-12) for details.)
 3. With the switch off, measure the voltages:
    1. Accross the resistor R<sub>C</sub>.
    2. At the collector (C).
@@ -64,14 +64,14 @@ The soil moisture sensor is a transistor-based device to measure the moisture of
 1. Based on your understanding of the operation of transistors from the previous sections, look at the schematic of the soil sensor circuit and describe its operation in the README.
 2. How will you measure the _resistance_ of full-soaked soil? Give an explanation, take and embed an image of your setup, and record in the README your measured values for _fully dry soil_ R<sub>DRY</sub>, _somewhat wet soil_ R<sub>WET</sub>, and _fully soaked soil_ R<sub>SOAK</sub>.
 3. How will you measure the _base voltage_ V<sub>B</sub> of the sensor transistor? Give an explanation, take and embed an image of your setup, and record in the README your measured values for _fully dry soil_ V<sub>B<sub>DRY</sub></sub>, _somewhat wet soil_ V<sub>B<sub>WET</sub></sub>, and _fully soaked soil_ V<sub>B<sub>SOAK</sub></sub>.
-1. Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is _pressed_). _Note: Do you need an external or internal [pullup resistor](https://www.google.com/search?q=pullup+pulldown+resistor&oq=pullup+pull)?_ Commit the JavaScript file to your assignment repository, calling it `digital-in.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
-2. Hook up the soil moisture sensor. There are three wires coming out: VCC, GND, and SIG. Pick a GPIO pin, configure it as digital output, and wire VCC to it. Pick a GPIO pin, configure it as analog in, and wire SIG to it. GND whould be wired to ground on the micro:bit.
-3. Write a program that:
+4. Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is _pressed_). _Note: Do you need an external or internal [pullup resistor](https://www.google.com/search?q=pullup+pulldown+resistor&oq=pullup+pull)?_ Commit the JavaScript file to your assignment repository, calling it `digital-in.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video. (UPDATE: This is incorrect. TTL switches are 5V when on, which is too high for the micro:bit, which operates at 3.3V. See the [asst 5 errata](asst5-errata.md#item-34) for details.)
+5. Hook up the soil moisture sensor. There are three wires coming out: VCC, GND, and SIG. Pick a GPIO pin, configure it as digital output, and wire VCC to it. Pick a GPIO pin, configure it as analog in, and wire SIG to it. GND whould be wired to ground on the micro:bit.
+6. Write a program that:
    1. Reads the sensor input in a loop with pauses to get the reading.
    2. It only powers the sensor when it takes a reading, by writing a 1 and then a 0 to the digital output pin. 
    3. Maps the range of input values of the sensor (you need to measure them yourself) to the range 0-4. Use the [`map`](https://makecode.microbit.org/reference/pins/map) function. This is called _calibration_ of the sensor. For the minimum value, take a reading with a dry sensor not touching anything; for the maximum value, take a reading with the sensor prongs dipped in shallow water. **Do not immerse the whole sensor in water!**
    4. When it takes a sensor reading, it lights up as many rows of the LED matrix as correspond to the rescaled magnitude of the reading.
-4. Commit the JavaScript file to your assignment repository, calling it `manual-calibration.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
+7. Commit the JavaScript file to your assignment repository, calling it `manual-calibration.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
 
 ##### 4. Automatic calibration
    
