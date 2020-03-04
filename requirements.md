@@ -29,7 +29,7 @@ This assignment introduces transistors and electrical circuits that employ them.
 4. With the switch off, measure the currents:
    1. The collector current I<sub>C</sub>.
    2. The emitter current I<sub>E</sub>.
-   3. The base current I<sub>B</sub>. _If this current is not zero, you are doing something wrong :)_
+   3. The base current I<sub>B</sub>. _If this current is not zero, you are doing something wrong :)_ (UPDATE: This holds _only_ for the case when the switch is off, not in the case when you are repeating these measurements with the switch on. See the [asst 5 errata](asst5-errata.md#item-14) for details.)
    4. Record these currents in the README. Does any current flow?
 5. Turn the switch on and repeat the measurements in (3) and (4), recording them in the README.
 6. What can you say about the relationship among the three currents I<sub>C</sub>, I<sub>E</sub>, and I<sub>B</sub>?
@@ -39,7 +39,7 @@ This assignment introduces transistors and electrical circuits that employ them.
 ##### 2. PNP transistor circuit
 
 1. Pick a [2N3906](https://www.sparkfun.com/datasheets/Components/2N3906.pdf) transistor and build the circuit on the right. _Does the LED light up when the switch is on or off? Explain._
-2. Repeat all the measurements from part (1) with the pnp circuit, and include in the README writeup.
+2. Repeat all the measurements from part (1) with the pnp circuit, and include in the README writeup. (UPDATE: If your LED still glows when it should be off, see the [asst 5 errata](asst5-errata.md#item-22) for a solution.)
 3. Answer the current questions from part (1), with the pnp circuit, and include in the README writeup.
 4. Make a non-aided drawing for the pnp curcuit and embed in the README.
 
