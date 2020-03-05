@@ -72,6 +72,7 @@ The soil moisture sensor is a transistor-based device to measure the moisture of
    3. Maps the range of input values of the sensor (you need to measure them yourself) to the range 0-4. Use the [`map`](https://makecode.microbit.org/reference/pins/map) function. This is called _calibration_ of the sensor. For the minimum value, take a reading with a dry sensor not touching anything; for the maximum value, take a reading with the sensor prongs dipped in shallow water. **Do not immerse the whole sensor in water!**
    4. When it takes a sensor reading, it lights up as many rows of the LED matrix as correspond to the rescaled magnitude of the reading.
 7. Commit the JavaScript file to your assignment repository, calling it `manual-calibration.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
+8. **(BONUS)** Using the oscilloscope, measure the power pulse your program is producing to drive the soil sensor. Record this in the [README.md](README.md) and embed the code that is causing the power pulse.
 
 ##### 4. Automatic calibration
    
