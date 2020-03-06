@@ -18,6 +18,12 @@ Use the SPDT switches on the bottom as shown in the image below. Bring 5V over f
 
 If the image doesn't show, try following [this link](https://photos.app.goo.gl/V5FnHwSvj8XLRz489).
 
+### Item 1.3
+
+This item and the following ones state that the switch is _on_ or _off_. This is confusing. Interpret these as follows:
+1. "ON" is LOGIC HIGH, so this is a _positive_ voltage. _Depending on the kind of logic used, this can be 1V, 3.3V, or 5V._
+2. "OFF" is LOGIC LOW, so this is 0V.
+
 ### Item 1.4
 
 The [requirements](requirements.md#1-npn-transistor-circuit) state that, when the switch at the base is off, if the base current is non-zero, you are doing something wrong. This is **correct**: there should be no current flowing with a switch off! However, in Item 1.5, you are asked to turn the switch on and repeat Items 1.3 and 1.4. This time, there _should be current flowing through the base_, so the statement in Item 1.4 does not hold.
