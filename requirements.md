@@ -72,7 +72,7 @@ The soil moisture sensor is a transistor-based device to measure the moisture of
    3. Maps the range of input values of the sensor (you need to measure them yourself) to the range 0-4. Use the [`map`](https://makecode.microbit.org/reference/pins/map) function. This is called _calibration_ of the sensor. For the minimum value, take a reading with a dry sensor not touching anything; for the maximum value, take a reading with the sensor prongs dipped in shallow water. **Do not immerse the whole sensor in water!**
    4. When it takes a sensor reading, it lights up as many rows of the LED matrix as correspond to the rescaled magnitude of the reading.
 7. Commit the JavaScript file to your assignment repository, calling it `manual-calibration.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
-8. **(BONUS)** Using the oscilloscope, measure the power pulse your program is producing to drive the soil sensor. Record this in the [README.md](README.md) and embed the code that is causing the power pulse.
+8. **(BONUS)** Using the oscilloscope, measure the power pulse your program is producing to drive the soil sensor. Record this in the [README.md](README.md) and embed the code that is causing the power pulse. _Watch the [oscilloscope](#oscilloscopes) videos to help you._
 
 ##### 4. Automatic calibration
    
@@ -116,6 +116,15 @@ The soil moisture sensor is a transistor-based device to measure the moisture of
 ### Sensors
 
 1. SparkFun soil moisture sensor [hookup guide](https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide). _Note: The guide is for Arduino, not micro:bit, but that does not affect the operation of the sensor See the intro item in the [soil sensor section above](#soil-sensor)._
+
+### Oscilloscopes
+
+1. Video [Oscilloscopes Made Easy Part 1](https://www.youtube.com/watch?v=uU3FhH7_MWo&t=1s)
+2. Video [EEVblog #279 - How not to blow up your oscilloscope](https://www.youtube.com/watch?v=xaELqAo4kkQ)
+3. Video [Oscilloscopes Made Easy Part 2](https://www.youtube.com/watch?v=5VyotIVwRiA)
+4. Video [How to use an oscilloscope (SparkFun)](https://www.youtube.com/watch?v=u4zyptPLlJI)
+5. Video [Oscilloscope tutorial](https://www.youtube.com/watch?v=CzY2abWCVTY)
+6. Video [Rigol 1000s Series docs (manuals, datasheets, videos)](https://www.rigolna.com/products/digital-oscilloscopes/1000z/)
 
 ### Github
 
