@@ -18,16 +18,21 @@
    - [CircuitJS](http://lushprojects.com/circuitjs/)   
      - visualization!!!
    - [others](https://www.google.com/search?q=free+circuit+simulator)  
-5. Soil sensor.  
+5. Micro:bit hardware  
+   - [v1.5 schematic](https://github.com/bbcmicrobit/hardware/blob/master/V1.5/SCH_BBC-Microbit_V1.5.PDF)  
+6. TBD  
+7. TBD  
+8. TBD  
+9. Soil sensor.  
    - transistor-based sensor  
    - H<sub>2</sub>O resistance  
    - simulate  
    - basic operation
    - micro:bit analog I/O  
-6. Manual calibration of soil sensor.  
-7. Automatic calibration of soil sensor.  
-8. Sensor reading:  
-   - 5 external LEDs of different colors  
-   - 2 external LEDs, one w/ 4 levels of brightness based on PWM duty cycle  
+10. Manual calibration of soil sensor.  
+11. Automatic calibration of soil sensor.  
+12. Sensor reading:  
+    - 5 external LEDs of different colors  
+    - 2 external LEDs, one w/ 4 levels of brightness based on PWM duty cycle  
 
 
