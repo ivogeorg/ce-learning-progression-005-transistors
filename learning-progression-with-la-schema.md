@@ -19,7 +19,9 @@
      - visualization!!!
    - [others](https://www.google.com/search?q=free+circuit+simulator)  
 5. Micro:bit hardware  
-   - [v1.5 schematic](https://github.com/bbcmicrobit/hardware/blob/master/V1.5/SCH_BBC-Microbit_V1.5.PDF)  
+   - [Docs](https://tech.microbit.org/hardware/)  
+   - [Github](https://github.com/bbcmicrobit/hardware)  
+     - [v1.5 schematic & BOM](https://github.com/bbcmicrobit/hardware/tree/master/V1.5)  
 6. TBD  
 7. TBD  
 8. TBD  
