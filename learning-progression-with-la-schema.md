@@ -8,23 +8,26 @@
    - semiconductors & doping  
    - electronic switches  
    - BJTs are current amplifiers  
-   - FETs no current  
-2. NPN circuit.  
-3. PNP circuit.  
-4. Circuit capture & simulation:  
+   - FETs no base current  
+2. BJT circuits (Apply: Pick NPN or PNP).  
+3. Circuit capture & simulation:  
+   - [CircuitJS](http://lushprojects.com/circuitjs/)   
+     - visualization!!!
    - [CircuitLab](https://www.circuitlab.com/)  
    - [PartSim](https://www.partsim.com/)  
    - [MicroCap](http://www.spectrum-soft.com/download/download.shtm) + [guide](https://hackaday.com/2020/01/08/commercial-circuit-simulator-goes-free/)  
-   - [CircuitJS](http://lushprojects.com/circuitjs/)   
-     - visualization!!!
    - [others](https://www.google.com/search?q=free+circuit+simulator)  
-5. Micro:bit hardware  
+4. Logic gates out of transistors.  
+5. Half-adder and full adder out of gates (on "paper"). 
+6. Simulate gates and adders in the microbit (programmatic).  
+7. Micro:bit hardware  
    - [Docs](https://tech.microbit.org/hardware/)  
+     - [block diagram](https://tech.microbit.org/hardware/#hardware-block-diagram)  
    - [Github](https://github.com/bbcmicrobit/hardware)  
      - [v1.5 schematic & BOM](https://github.com/bbcmicrobit/hardware/tree/master/V1.5)  
-6. TBD  
-7. TBD  
-8. TBD  
+8. ARM Cortex-M0 assembly.  
+   - [VisUAL](https://salmanarif.bitbucket.io/visual/)  
+   - [Others](https://www.google.com/search?q=arm+cortex-m0+assembly+simulator&oq=arm+cortex-m0+assembly+simulator&aqs=chrome..69i57j33.10676j0j1&sourceid=chrome&ie=UTF-8)  
 9. Soil sensor.  
    - transistor-based sensor  
    - H<sub>2</sub>O resistance  
@@ -38,3 +41,6 @@
     - 2 external LEDs, one w/ 4 levels of brightness based on PWM duty cycle  
 
 
+### Ideas
+1. [I2C software implementation](https://www.google.com/search?q=i2c+software+implementation&oq=i2c+software+&aqs=chrome.1.69i57j0j46j0l5.4499j0j1&sourceid=chrome&ie=UTF-8)  
+2. 
