@@ -18,6 +18,7 @@
    - [MicroCap](http://www.spectrum-soft.com/download/download.shtm) + [guide](https://hackaday.com/2020/01/08/commercial-circuit-simulator-goes-free/)  
    - [others](https://www.google.com/search?q=free+circuit+simulator)  
 4. Logic gates out of transistors.  
+   - [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
 5. Half-adder and full adder out of gates (on "paper"). 
 6. Simulate gates and adders in the microbit (programmatic).  
 7. Micro:bit hardware  
