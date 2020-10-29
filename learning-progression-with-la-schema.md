@@ -26,6 +26,11 @@
      - [block diagram](https://tech.microbit.org/hardware/#hardware-block-diagram)  
    - [Github](https://github.com/bbcmicrobit/hardware)  
      - [v1.5 schematic & BOM](https://github.com/bbcmicrobit/hardware/tree/master/V1.5)  
+   - firmware  
+   - flashing  
+     - [HID Flash](https://makecode.microbit.org/hidflash)  
+   - micro:bit v2  
+   - [Data Analysis](https://makecode.microbit.org/device/data-analysis).  
 8. ARM Cortex-M0 assembly.  
    - [VisUAL](https://salmanarif.bitbucket.io/visual/)  
    - [Others](https://www.google.com/search?q=arm+cortex-m0+assembly+simulator&oq=arm+cortex-m0+assembly+simulator&aqs=chrome..69i57j33.10676j0j1&sourceid=chrome&ie=UTF-8)  
