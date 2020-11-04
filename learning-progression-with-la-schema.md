@@ -10,7 +10,7 @@
    - BJTs are current amplifiers  
    - FETs no base current  
 2. BJT circuits (Apply: Pick NPN or PNP).  
-3. Circuit capture & simulation:  
+3. ~Circuit capture & simulation:~  
    - [CircuitJS](http://lushprojects.com/circuitjs/)   
      - visualization!!!
    - [CircuitLab](https://www.circuitlab.com/)  
@@ -19,9 +19,9 @@
    - [others](https://www.google.com/search?q=free+circuit+simulator)  
 4. Logic gates out of transistors.  
    - [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
-5. Half-adder and full adder out of gates (on "paper"). 
-6. Simulate gates and adders in the microbit (programmatic).  
-7. Micro:bit hardware  
+5. ~Half-adder and full adder out of gates (on "paper").~ 
+6. ~Simulate gates and adders in the microbit (programmatic).~  
+7. ~Micro:bit hardware~  
    - [Docs](https://tech.microbit.org/hardware/)  
      - [block diagram](https://tech.microbit.org/hardware/#hardware-block-diagram)  
    - [Github](https://github.com/bbcmicrobit/hardware)  
@@ -31,7 +31,7 @@
      - [HID Flash](https://makecode.microbit.org/hidflash)  
    - micro:bit v2  
    - [Data Analysis](https://makecode.microbit.org/device/data-analysis).  
-8. ARM Cortex-M0 assembly.  
+8. ~ARM Cortex-M0 assembly.~  
    - [VisUAL](https://salmanarif.bitbucket.io/visual/)  
    - [Others](https://www.google.com/search?q=arm+cortex-m0+assembly+simulator&oq=arm+cortex-m0+assembly+simulator&aqs=chrome..69i57j33.10676j0j1&sourceid=chrome&ie=UTF-8)  
 9. Soil sensor.  
