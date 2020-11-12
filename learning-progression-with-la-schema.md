@@ -1,12 +1,17 @@
 # CPE 1040 - Fall 2020
 
-## Learning Progression 005: Transistors
+This is learning progression 004 for the Fall 2020 installment of the course CPE 1040: Introduction to Computer Engineering at MSU Denver.
 
 ## Composition resources
 1. [Transistors](https://docs.google.com/document/d/1KpK2u7tlg9IpjeqpNTxizabOwoFxsuq-k4WMEPzzcE4/edit) narrative on Google Docs.  
 2. [Old requirements](old-requirements.md).  
 3. Logic levels, etc. from [LP006](https://github.com/ivogeorg/ce-learning-progression-006-flip-flops/blob/master/learning-progression.md).  
 4. Logic gates from transistors from [LP007](https://github.com/ivogeorg/ce-learning-progression-007-logic-gates/blob/master/learning-progression-with-la-schema.md).  
+
+## Learning Progression 005: Transistors
+[[toc](#table-of-contents)]  
+
+This progression introduces transistors, the single most important electronic device in the history and present state of computing. The transistor is a 3-terminal semiconductor device which acts like an electronic switch, allowing the design of both processing and memory devices. Modern processors and memories each contain millions of transistors, packed into ever smaller areas of silicon. The progression shows how logic gates are created out of combinations of transistors. It also shows how a single transistor can server as a moisture sensor when cleverly connected. Last but not least, it continues the micro:bit I/O theme.
 
 ## Lab kit
 [[toc](#table-of-contents)]  
