@@ -4,9 +4,11 @@ This is learning progression 004 for the Fall 2020 installment of the course CPE
 
 ## Composition resources
 1. [Transistors](https://docs.google.com/document/d/1KpK2u7tlg9IpjeqpNTxizabOwoFxsuq-k4WMEPzzcE4/edit) narrative on Google Docs.  
-2. [Old requirements](old-requirements.md).  
+2. [Old requirements](@rchive/old-requirements.md).  
 3. Logic levels, etc. from [LP006](https://github.com/ivogeorg/ce-learning-progression-006-flip-flops/blob/master/learning-progression.md).  
 4. Logic gates from transistors from [LP007](https://github.com/ivogeorg/ce-learning-progression-007-logic-gates/blob/master/learning-progression-with-la-schema.md).  
+
+
 
 ## Learning Progression 005: Transistors
 [[toc](#table-of-contents)]  
@@ -48,6 +50,10 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 2. Apply
 [[toc](#table-of-contents)]
 
+**TODO: Discovery and thought experiments**
+
+1. `[<lernact-disc>]`  
+
 #### 3. Present
 [[toc](#table-of-contents)]
 
@@ -63,26 +69,13 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-#### 3. Present
-[[toc](#table-of-contents)]
-
-
-### Step 3: Logic gates out of transistors  
-[[toc](#table-of-contents)]
-
-#### 1. Study
-[[toc](#table-of-contents)]
-
-- [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
-
-#### 2. Apply
-[[toc](#table-of-contents)]
+**TODO: Build NPN. PNP for opt. CircuitJS opt.**
 
 #### 3. Present
 [[toc](#table-of-contents)]
 
 
-### Step 4: Soil sensor  
+### Step 3: Soil sensor  
 [[toc](#table-of-contents)]
 
 #### 1. Study
@@ -101,7 +94,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 [[toc](#table-of-contents)]
 
 
-### Step 5: Manual calibration of soil sensor  
+### Step 4: Manual calibration of soil sensor  
 [[toc](#table-of-contents)]
 
 #### 1. Study
@@ -114,7 +107,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 [[toc](#table-of-contents)]
 
 
-### Step 6: Automatic calibration of soil sensor
+### Step 5: Automatic calibration of soil sensor
 [[toc](#table-of-contents)]
 
 #### 1. Study
@@ -127,7 +120,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 [[toc](#table-of-contents)]
 
 
-### Step 7: Sensor reading  
+### Step 6: Sensor reading  
 [[toc](#table-of-contents)]
 
 #### 1. Study
@@ -141,4 +134,77 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 
 #### 3. Present
 [[toc](#table-of-contents)]
+
+### Step 7: Logic gates out of transistors  
+[[toc](#table-of-contents)]
+
+#### 1. Study
+[[toc](#table-of-contents)]
+
+- [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
+
+#### 2. Apply
+[[toc](#table-of-contents)]
+
+#### 3. Present
+[[toc](#table-of-contents)]
+
+### Step 8: Half adder and full adder
+
+#### 1. Study
+[[toc](#table-of-contents)]
+
+Half-adder and full adder out of gates (on "paper").
+
+#### 2. Apply
+[[toc](#table-of-contents)]
+
+**TODO: Full adder**
+
+#### 3. Present
+[[toc](#table-of-contents)]
+
+### Step 9: Simulated logic gates
+
+#### 1. Study
+
+- booleans for bits!
+
+#### 2. Apply
+
+#### 3. Present
+
+
+### Step 10: Simulated adder
+
+#### 1. Study
+
+- connecting simulated gates
+
+#### 2. Apply
+
+#### 3. Present
+
+
+### Step 11: Simulated ALU bit slice
+
+#### 1. Study
+
+- all functions of an ALU
+- carry  
+- shift  
+
+#### 2. Apply
+
+#### 3. Present
+
+### Step 12: Simulated 4-bit ALU
+
+#### 1. Study
+
+- multiplexor
+
+#### 2. Apply
+
+#### 3. Present
 
