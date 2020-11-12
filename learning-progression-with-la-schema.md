@@ -4,47 +4,11 @@ This is learning progression 004 for the Fall 2020 installment of the course CPE
 
 ## Composition resources
 1. [Transistors](https://docs.google.com/document/d/1KpK2u7tlg9IpjeqpNTxizabOwoFxsuq-k4WMEPzzcE4/edit) narrative on Google Docs.  
-2. [Old requirements](old-requirements.md).  
+2. [Old requirements](@rchive/old-requirements.md).  
 3. Logic levels, etc. from [LP006](https://github.com/ivogeorg/ce-learning-progression-006-flip-flops/blob/master/learning-progression.md).  
 4. Logic gates from transistors from [LP007](https://github.com/ivogeorg/ce-learning-progression-007-logic-gates/blob/master/learning-progression-with-la-schema.md).  
 
-Table of Contents
-=================
 
-* [CPE 1040 \- Fall 2020](#cpe-1040---fall-2020)
-  * [Composition resources](#composition-resources)
-  * [Learning Progression 005: Transistors](#learning-progression-005-transistors)
-  * [Lab kit](#lab-kit)
-    * [Parts for progression](#parts-for-progression)
-  * [Steps](#steps)
-    * [Step 1: Transistors](#step-1-transistors)
-      * [1\. Study](#1-study)
-      * [2\. Apply](#2-apply)
-      * [3\. Present](#3-present)
-    * [Step 2: BJT circuits](#step-2-bjt-circuits)
-      * [1\. Study](#1-study-1)
-      * [2\. Apply](#2-apply-1)
-      * [3\. Present](#3-present-1)
-    * [Step 3: Logic gates out of transistors](#step-3-logic-gates-out-of-transistors)
-      * [1\. Study](#1-study-2)
-      * [2\. Apply](#2-apply-2)
-      * [3\. Present](#3-present-2)
-    * [Step 4: Soil sensor](#step-4-soil-sensor)
-      * [1\. Study](#1-study-3)
-      * [2\. Apply](#2-apply-3)
-      * [3\. Present](#3-present-3)
-    * [Step 5: Manual calibration of soil sensor](#step-5-manual-calibration-of-soil-sensor)
-      * [1\. Study](#1-study-4)
-      * [2\. Apply](#2-apply-4)
-      * [3\. Present](#3-present-4)
-    * [Step 6: Automatic calibration of soil sensor](#step-6-automatic-calibration-of-soil-sensor)
-      * [1\. Study](#1-study-5)
-      * [2\. Apply](#2-apply-5)
-      * [3\. Present](#3-present-5)
-    * [Step 7: Sensor reading](#step-7-sensor-reading)
-      * [1\. Study](#1-study-6)
-      * [2\. Apply](#2-apply-6)
-      * [3\. Present](#3-present-6)
 
 ## Learning Progression 005: Transistors
 [[toc](#table-of-contents)]  
@@ -86,6 +50,10 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 2. Apply
 [[toc](#table-of-contents)]
 
+**TODO: Discovery and thought experiments**
+
+1. `[<lernact-disc>]`  
+
 #### 3. Present
 [[toc](#table-of-contents)]
 
@@ -101,26 +69,13 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-#### 3. Present
-[[toc](#table-of-contents)]
-
-
-### Step 3: Logic gates out of transistors  
-[[toc](#table-of-contents)]
-
-#### 1. Study
-[[toc](#table-of-contents)]
-
-- [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
-
-#### 2. Apply
-[[toc](#table-of-contents)]
+**TODO: Build NPN. PNP for opt. CircuitJS opt.**
 
 #### 3. Present
 [[toc](#table-of-contents)]
 
 
-### Step 4: Soil sensor  
+### Step 3: Soil sensor  
 [[toc](#table-of-contents)]
 
 #### 1. Study
@@ -139,7 +94,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 [[toc](#table-of-contents)]
 
 
-### Step 5: Manual calibration of soil sensor  
+### Step 4: Manual calibration of soil sensor  
 [[toc](#table-of-contents)]
 
 #### 1. Study
@@ -152,7 +107,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 [[toc](#table-of-contents)]
 
 
-### Step 6: Automatic calibration of soil sensor
+### Step 5: Automatic calibration of soil sensor
 [[toc](#table-of-contents)]
 
 #### 1. Study
@@ -165,7 +120,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 [[toc](#table-of-contents)]
 
 
-### Step 7: Sensor reading  
+### Step 6: Sensor reading  
 [[toc](#table-of-contents)]
 
 #### 1. Study
@@ -179,4 +134,19 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 
 #### 3. Present
 [[toc](#table-of-contents)]
+
+### Step 7: Logic gates out of transistors  
+[[toc](#table-of-contents)]
+
+#### 1. Study
+[[toc](#table-of-contents)]
+
+- [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
+
+#### 2. Apply
+[[toc](#table-of-contents)]
+
+#### 3. Present
+[[toc](#table-of-contents)]
+
 
