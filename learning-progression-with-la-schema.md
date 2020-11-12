@@ -149,4 +149,62 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 3. Present
 [[toc](#table-of-contents)]
 
+### Step 8: Half adder and full adder
+
+#### 1. Study
+[[toc](#table-of-contents)]
+
+Half-adder and full adder out of gates (on "paper").
+
+#### 2. Apply
+[[toc](#table-of-contents)]
+
+**TODO: Full adder**
+
+#### 3. Present
+[[toc](#table-of-contents)]
+
+### Step 9: Simulated logic gates
+
+#### 1. Study
+
+- booleans for bits!
+
+#### 2. Apply
+
+#### 3. Present
+
+
+### Step 10: Simulated adder
+
+#### 1. Study
+
+- connecting simulated gates
+
+#### 2. Apply
+
+#### 3. Present
+
+
+### Step 11: Simulated ALU bit slice
+
+#### 1. Study
+
+- all functions of an ALU
+- carry  
+- shift  
+
+#### 2. Apply
+
+#### 3. Present
+
+### Step 12: Simulated 4-bit ALU
+
+#### 1. Study
+
+- multiplexor
+
+#### 2. Apply
+
+#### 3. Present
 
