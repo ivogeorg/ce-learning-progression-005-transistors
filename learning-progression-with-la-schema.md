@@ -203,6 +203,8 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 2. Apply
 [[toc](#table-of-contents)]
 
+**TODO: On paper, build and measure.**
+
 #### 3. Present
 [[toc](#table-of-contents)]
 
@@ -232,7 +234,7 @@ Half-adder and full adder out of gates (on "paper").
 #### 3. Present
 
 
-### Step 10: Simulated adder
+### Step 10: Full adder emulation
 
 #### 1. Study
 
@@ -243,7 +245,7 @@ Half-adder and full adder out of gates (on "paper").
 #### 3. Present
 
 
-### Step 11: Simulated ALU bit slice
+### Step 11: ALU bit slice
 
 #### 1. Study
 
@@ -255,9 +257,18 @@ Half-adder and full adder out of gates (on "paper").
 
 #### 2. Apply
 
+1. `[<lernact-prac>]`Trace and highlight the active lines for the NOT function in the bit-slice diagram.  
+
+2. `[<lernact-prac>]`Put 4 bit slices next to each other and connect them to form a 4-bit ALU. Answer the following questions:
+   1. How many control lines do you have in total, and what are they? (Make sure they are properly connected in your diagram.)  
+   2. How many data lines do you have in total, and what are they? (Make sure they are properly connected in your diagram.)  
+
+3. **TODO**
+
 #### 3. Present
 
-### Step 12: Simulated 4-bit ALU
+
+### Step 12: Emulated 4-bit ALU
 
 #### 1. Study
 
@@ -265,7 +276,43 @@ Half-adder and full adder out of gates (on "paper").
 
 #### 2. Apply
 
-**TODO: 4 alu slices; enter a, enter b, select function, get result on external leds**
+1. `[<lernact-prac>]`Implement an emulator of a full adder for 4-bit unsigned integers. Requirements:
+   1. Use the emulated full-adder bit slice from a previous step as a unit.  
+   2. Build 5 external LED circuits to show the result, including overflow. Consider the leftmost LED bit position as an `[<cept>]`_overlfow flag_.    
+   3. Pick operand `a` on the micro:bit screen.  
+   4. Pick operand `b` on the micro:bit screen.  
+   5. Show the result on the external LEDs.  
+
+2. `[<lernact-prac>]`**[Optional challenge, max 5 extra step points]** Implement an emulator of a full adder for 4-bit 2s-complement signed integers. Apart from an extension of the full-adder slice, the requirements are the same as in 12.2.1. _Hint: Consider preprocessing the operands before doing the final addition._  
+
+3. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Implement an emulated ALU bit slice, based on simulated logic gates, with the following functions, and the necessary control lines:
+   1. Logical AND.  
+   2. Logical OR.  
+   3. Logical NOT.  
+   4. Logical XOR.  
+   5. 2s-complement binary addition.  
+   6. Left shift by 1 bit at a time.  
+   7. Right shift by 1 bit at a time.  
+   8. **[Additional challenge, max 3 extra step points]** An 8-th function of your choice (e.g. NAND).    
+   
+4. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Implement an emulator of a 4-bit ALU using the bit slice from the previous exercise as a unit. The rest of the requirements are the same as in 12.2.1.  
 
 #### 3. Present
 
+In the [programs](programs) directory:
+
+1. Add your program from 12.2.1 with filename `microbit-program-12-2-1.js`.  
+2. Add your program from 12.2.2 with filename `microbit-program-12-2-2.js`.  
+3. Add your program from 12.2.3 with filename `microbit-program-12-2-3.js`.  
+4. Add your program from 12.2.4 with filename `microbit-program-12-2-4.js`.  
+
+In the [Lab Notebook](README.md):
+
+1. Link to the program from 12.2.1.  
+2. Link to a demo video of the operation of the program from 12.2.1.  
+3. Link to the program from 12.2.2.  
+4. Link to a demo video of the operation of the program from 12.2.2.  
+5. Link to the program from 12.2.3.  
+6. Link to a demo video of the operation of the program from 12.2.3.  
+7. Link to the program from 12.2.4.  
+8. Link to a demo video of the operation of the program from 12.2.4.  
