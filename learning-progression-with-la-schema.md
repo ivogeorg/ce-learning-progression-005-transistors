@@ -247,6 +247,8 @@ Half-adder and full adder out of gates (on "paper").
 
 #### 1. Study
 
+<img src="images/alu-bit-slice.png" width="300" />
+
 - all functions of an ALU
 - carry  
 - shift  
@@ -262,6 +264,8 @@ Half-adder and full adder out of gates (on "paper").
 - multiplexor
 
 #### 2. Apply
+
+**TODO: 4 alu slices; enter a, enter b, select function, get result on external leds**
 
 #### 3. Present
 
