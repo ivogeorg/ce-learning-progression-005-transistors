@@ -89,6 +89,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 7. 2N3906 (PNP) transistors.  
 8. LEDs.  
 9. Wires.  
+10. Multimeter with needle-tipped probes.  
 
 ## Steps
 [[toc](#table-of-contents)]
@@ -99,21 +100,67 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 1. Study
 [[toc](#table-of-contents)]
 
-- semiconductors & doping  
-- electronic switches  
-- BJTs are current amplifiers  
-- FETs no base current  
+_Note: Watching the videos referenced at the begging of sections is the best way to understand this material. In some cases, there may be multiple videos that cover the same material, to give you extra depth. The text below briefly covers the main points, without going into detail._
+
+##### Semiconductors
+
+`[<lernact-see>]`Video of [semiconductor operation](https://www.youtube.com/watch?v=33vbFFFn04k) by [Ben Eater](https://eater.net/).    
+
+`[<lernact-rd>]``[<cept>]`_Semiconductors_ are materials which occupy a middle ground between metals (conductors) and dielectrics, in terms of their `[<cept>]`_conductivity_ of electrical current.
+ 
+Semiconductors are usually pure `[<cept>]`_chemical elements_ (like silicon, Si) which have been `[<cept>]`_doped_, that is, to which a small amount of another element has been added, to create a cumulative excess of free electrons (e.g. phosphorus, P), thus charging the material negative (`[<cept>]`_n-doping_), or a cumulative dearth of free electrons (e.g. boron, B), thus charging the material positive (`[<cept>]`_p-doping_).
+ 
+When p-doped and n-doped regions are created next to each other, interesting electrical behavior occurs, mostly to do with the properties of the resulting  `[<cept>]`_depletion region_ at the `[<cept>]`_p-n junction_.
+
+##### The diode
+
+`[<lernact-see>]`Video of [bipolar diode operation](https://www.youtube.com/watch?v=-SSkjWuUri4).  
+
+`[<lernact-rd>]`Diodes are elements which conduct current in only one direction. The simplest diodes are just PN junctions. The N side is called a `[<cept>]`_cathode_, while the P side is called the `[<cept>]`_anode_. When positive voltage is applied from cathode to anode, that is  + NP -, the excess electrons in the cathode region are attracted to the positive voltage terminal, drawing away from the center region of the diode. Similarly, the excess of holes (that is, the dearth of electrons) are attracted to the negative terminal, also drawing away from the center region. As a result, the depletion region, which is the center area where excess electrons recombine with excess holes to make the region electrically neutral, grows and prevents the flow of current through the diode. When voltage is applied in the opposite direction, that is - NP +, the depletion region shrinks or disappears completely, and current can flow.
+
+##### The transistor
+
+`[<lernact-see>]`Video of [transistor operation](https://www.youtube.com/watch?v=DXvAlwMAxiA) by [Ben Eater](https://eater.net/).  
+`[<lernact-see>]`Video of [transistor operation](https://www.youtube.com/watch?v=7ukDKVHnac4).  
+`[<lernact-see>]`Video of [NPN and PNP transistor operation](https://www.youtube.com/watch?v=R0Uy4EL4xWs).  
+
+`[<lernact-rd>]`Transistors:
+1. Are active circuit elements.   
+2. Have 3 terminals.  
+3. Use either current or voltage to control a larger current.   
+4. Act as switches.  
+
+We will exclusively focus on the so-called `[<cept>]`_bipolar-junction transistors (BJTs)_, which are either a thin N-doped region sandwiched between two thicker P-doped regions (PNP transistor), or a thin P-doped region sandwiched between two thicker N-doped regions (NPN transistor). The middle region is called the `[<cept>]`_base (B)_ and is the one which controls the current between the two outer regions, the `[<cept>]`_emitter (E)_ and the `[<cept>]`_collector (C)_. When the voltage difference between the base and emitter becomes 0.7 V, base current starts to flow, as a result of which a much larger collector current starts to flow also. Thus, BJTs are current amplifiers. 
+
+For the NPN transistor, V<sub>BE</sub> = + 0.7 V and the base current flows out of the base. For the PNP transistor, V<sub>BE</sub> = - 0.7 V (or V<sub>EB</sub> = + 0.7 V) and the base current flows into the base.
+
+##### Field-effect transistors
+
+`[<lernact-see>]`Video of [MOSFET operation](https://www.youtube.com/watch?v=stM8dgcY1CA).  
+
+`[<lernact-rd>]`As opposed to BJTs, `[<cept>]`_field-effect transistors (FETs)_ do not have base current. Instead, they employ variable voltage applied to the `[<cept>]`_gate_ terminal (analagous to the base in BJTs) to shrink or expand the conducting region between the other two terminals, the `[<cept>]`_source_ (analogous to the emitter in BJTs) and the `[<cept>]`_drain_ (analogous to the collector in BJTs).
+
+##### A note on current direction
+
+`[<lernact-rd>]`The convention is that `[<cept>]`_positive current_ flows in the direction opposite the flow of the electron charges. It is good practice to check whether a material refers to `[<cept>]`_conventional current_ or not.  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-**TODO: Discovery and thought experiments**
-**questions from the Google doc**  
-
-1. `[<lernact-disc>]`  
+1. `[<lernact-texp>]`If you connect two bipolar junction diodes in series, either in PN-NP or NP-PN configuration, and connect a wire between them to act as the base, can you make a PNP or NPN transistor? Why or why not?  
+2. `[<lernact-disc>]`BJT transistors use their base current to control the main circuit current, whereas FET transistors only use voltage and have no base current. Which of the two types would you think more likely to be the choice for the production of integrated circuits (like processors and memory sticks), where transistors are packed very densely and close to each other?  
+3. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** **TODO** SRAM cell and SRAM operation...  
+4. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** How are transistor density and the `[<cept>]`_dark silicon_ problem related?  
 
 #### 3. Present
 [[toc](#table-of-contents)]
+
+In the [Lab Notebook](README.md):
+
+1. Answer the questions in 1.2.1. Show your work in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+2. Answer the question in 1.2.2. Show your work in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+1. Answer the questions in 1.2.3. Show your work in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+1. Answer the questions in 1.2.4. Show your work in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
 
 
 ### Step 2: BJT circuits
@@ -122,7 +169,8 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 1. Study
 [[toc](#table-of-contents)]
 
-(Apply: Pick NPN or PNP).  
+`[<lernact-see>]`Video of [NPN and PNP Transistors as `[<cept>]`_common-emitter switches_](https://www.youtube.com/watch?v=kNVaIqmKUoI)
+
 
 #### 2. Apply
 [[toc](#table-of-contents)]
@@ -212,6 +260,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 [[toc](#table-of-contents)]
 
 - [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
+- videos of gates from (FET) transistors  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
