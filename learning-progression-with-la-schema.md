@@ -171,11 +171,19 @@ In the [Lab Notebook](README.md):
 
 `[<lernact-see>]`Video of [NPN and PNP Transistors as `[<cept>]`_common-emitter switches_](https://www.youtube.com/watch?v=kNVaIqmKUoI)
 
+- disentangle the two loops and show the micro:bit   
+
+<img src="images/npn-led-microbit.png" width="600" />
 
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-**TODO: Build NPN. PNP for opt. CircuitJS opt.**
+**TODO:**
+1. Build NPN.  
+2. Where else can the load circuit go without changing the overall behavior?  
+3. PNP for opt.  
+4. CircuitJS opt.  
+
 
 #### 3. Present
 [[toc](#table-of-contents)]
