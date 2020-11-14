@@ -53,7 +53,7 @@ Table of Contents
       * [1\. Study](#1-study-8)
       * [2\. Apply](#2-apply-8)
       * [3\. Present](#3-present-8)
-    * [Step 10: Simulated adder](#step-10-simulated-adder)
+    * [Step 10: Full adder emulation](#step-10-full-adder-emulation)
       * [1\. Study](#1-study-9)
       * [2\. Apply](#2-apply-9)
       * [3\. Present](#3-present-9)
@@ -108,6 +108,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 [[toc](#table-of-contents)]
 
 **TODO: Discovery and thought experiments**
+**questions from the Google doc**  
 
 1. `[<lernact-disc>]`  
 
@@ -138,6 +139,9 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 1. Study
 [[toc](#table-of-contents)]
 
+- [guide](https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide) (note, it's for a different board)   
+- schematic  
+
 - transistor-based sensor  
 - H<sub>2</sub>O resistance  
 - simulate  
@@ -146,6 +150,9 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 
 #### 2. Apply
 [[toc](#table-of-contents)]
+
+**TODO: complete the guide**  
+**TODO: simulate in CircuitJS  (with a gate resistor slider)**    
 
 #### 3. Present
 [[toc](#table-of-contents)]
@@ -160,6 +167,8 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 2. Apply
 [[toc](#table-of-contents)]
 
+**TODO: Manual calibration (with `map`) and bars**  
+
 #### 3. Present
 [[toc](#table-of-contents)]
 
@@ -173,6 +182,8 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 2. Apply
 [[toc](#table-of-contents)]
 
+**TODO: Program for user-assisted auto calibration before operation**
+
 #### 3. Present
 [[toc](#table-of-contents)]
 
@@ -183,11 +194,13 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 1. Study
 [[toc](#table-of-contents)]
 
-- 5 external LEDs of different colors  
-- 2 external LEDs, one w/ 4 levels of brightness based on PWM duty cycle  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
+
+**TODO: 5 external LEDs of different colors**  
+**TODO: 2 external LEDs, one w/ 4 levels of brightness based on PWM duty cycle**  
+
 
 #### 3. Present
 [[toc](#table-of-contents)]
@@ -204,6 +217,8 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 [[toc](#table-of-contents)]
 
 **TODO: On paper, build and measure.**
+**TODO: On breadboard, XOR with NPN and resistors.**
+**TODO: On CiruictJS, a 6-NPN-transistor design of an XOR.**
 
 #### 3. Present
 [[toc](#table-of-contents)]
@@ -213,12 +228,14 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 #### 1. Study
 [[toc](#table-of-contents)]
 
-Half-adder and full adder out of gates (on "paper").
+Show the process for the half-adder, all steps and whatever theory is necessary.  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
 
 **TODO: Full adder**
+**TODO: Half subtractor**
+**TODO: Full subtractor**
 
 #### 3. Present
 [[toc](#table-of-contents)]
@@ -228,8 +245,16 @@ Half-adder and full adder out of gates (on "paper").
 #### 1. Study
 
 - booleans for bits!
+- Boolean algebra!  
+- simulating connections    
+- `logic` function  
 
 #### 2. Apply
+
+**TODO: Build all gates**  
+**TODO: Build XOR**  
+**TODO: (Challenge) Build OR out of AND and OR**  
+**TODO: (Challenge) Build gates out of NANDs**  
 
 #### 3. Present
 
@@ -238,9 +263,11 @@ Half-adder and full adder out of gates (on "paper").
 
 #### 1. Study
 
-- connecting simulated gates
+- bits and pieces of the program  
 
 #### 2. Apply
+
+**TODO: Full-adder emulation program**
 
 #### 3. Present
 
