@@ -251,7 +251,8 @@ Half-adder and full adder out of gates (on "paper").
 
 <img src="images/alu-bit-slice.png" width="300" />
 
-- all functions of an ALU
+- all functions of an ALU  
+- multiplexor/selector/decoder  
 - carry  
 - shift  
 
@@ -263,9 +264,20 @@ Half-adder and full adder out of gates (on "paper").
    1. How many control lines do you have in total, and what are they? (Make sure they are properly connected in your diagram.)  
    2. How many data lines do you have in total, and what are they? (Make sure they are properly connected in your diagram.)  
 
-3. **TODO**
+3. `[<lernact-prac>]`**[Optional challenge, max 7 extra step points]** ALUs usually include comparison functions as well. They might or might not be performed inside the slices. Read this [post](https://www.electronics-tutorials.ws/combination/comb_8.html) on building a digital comparator. Modify the ALU bit-slice design from the diagram by removing the XOR function and substituting a LESS function instead.  
+
+4. `[<lernact-prac>]`**[Optional challenge, max 3 extra step points]** The same as 11.2.3 without adding any gates, so that, with the removal of the XOR gate, the new bit slice has _one gate less_.  
 
 #### 3. Present
+
+In the [Lab Notebook](README.md) and [images](images) directory:
+
+1. Show your work for 11.2.1 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+2. Answer question 11.2.2.1.  
+3. Answer question 11.2.2.2.  
+1. Show your work for 11.2.2 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+1. Show your work for 11.2.3 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+1. Show your work for 11.2.4 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
 
 
 ### Step 12: Emulated 4-bit ALU
