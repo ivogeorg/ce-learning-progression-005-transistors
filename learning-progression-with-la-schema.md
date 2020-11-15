@@ -388,16 +388,84 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 #### 1. Study
 [[toc](#table-of-contents)]
 
+`[<lernact-rd>]`While sensors can be calibrated and their data presented to the user coninuously, this may not be ideal for the amount of user attention they resume. It is often better to design the user interface to only alert the user when critical conditions are detected while blending into the background at other times. In this step we will explore how we can do that with the soil sensor, utilizing external LED reading indicators.  
+
+##### Reading intervals
+
+Let's assume that we have 5 external LEDs and we use the `pins.map()` function. If we pick the LED colors to form a smooth transition along the rainbow sequence, say red-orange-yellow-green-violet, this may be a simple way to achieve the goal of creating an intuitive and inobtrusive reading indicator. 
+
+Since we are using external LEDs, and we are using the mapping function, we need to create a way of refering to the proper LED by index, just like the case for the micro:bit screen bars. The most straightforward way to do that is to create the mapping between indices from the target range to the specific pins we have picked to drive the LEDs is with an array:
+```javascript
+// Example 6.1.1
+
+let led_pins : DigitalPin[] = [DigitalPin.P0, DigitalPin.P1, DigitalPin.P2, DigitalPin.P5, DigitalPin.P8] 
+```
+
+The mapping function `pins.map()` is converting from a source range roughly similar to [0, 1023] to our target range of [0, 4], that is from 1024 numbers to just 5. Consider the following questions:
+
+**Question 5.1.1:** Considering the [density property](http://www.math.com/school/subject2/lessons/S2U2L1DP.html) of real numbers, is it necessary that several different source range numbers are mapped to the same target range number?  
+**Question 5.1.2:** Write a program to map numbers in the source range [0, 1023] to the target range [0, 4] and display the result on the micro:bit using `basic.showNumber()`. Is the target range continuous or discrete? That is, do you see real numbers with fractional parts or only integers?  
+**Questoin 5.1.3:** Try to use the result from the call `pins.map(r, 0, 1024, 0, 4)`, where `r` is a random number (not necessarily an integer) in the source range, directly as an index in the selector operator of the `led_pins` array, that is `led.pins[pins.map(...)]`. What do you get?  Explain.  
+**Question 5.1.4:** How would you modify the result of the `map` function to work as an index?  
+**Question 5.1.5:** In the context of these questions, what do you think the `led.plot(x, y)` and `led.unplot(x, y)` functions do to their arguments `x` and `y`?  
+##### Pulse-width modulation
+
+What if we want a continuous moisture indicator, so that we can monitor precisely the process of soil desiccation? There is a very ingenuous way to smoothly vary the power sent to an LED, resulting in a smooth variation of its brightness, called `[<cept>]`_pulse-width modulation_. Here is a code example:
+```javascript
+
+// Example 6.1.2
+
+basic.forever(function () {
+    for (let i=1; i<40; i++) {
+        pins.servoSetPulse(AnalogPin.P0, i*500)  // period 20 ms = 20000 us
+        pause(50)
+    }
+})
+```
+Run it with a load circuit (330 Ohm + LED) from analog pin `P0`. What is actually happening? Look at the following sketch:
+
+<img src="images/pwm.png" width="800" />
+
+The voltage varies in a very specific manner: every 20 ms, a pulse of 3.3V and duration of 1.5 ms is sent. When the pulses are short, the LED at the pin outputing this signal is dark. As the pulse width grows, so does the brightness of the LED.
+
+##### Non-linear mapping
+
+What if the biological processes in the soil depend on the moisture content in a `[<cept>]`_non-linear_ way? This may be akin to how the feeling of comfort depends on relative humidity, as shown in the following image:
+
+<img src="images/relative-humidity.png" width="600" />
+
+[[Image credit](https://www.ac-heatingconnect.com/homeowners/cold-weather-home-humidity/)]
+
+Then our mapping using `pin.map()` doesn't work because the mapping it performs is `[<cept>]`_linear_, and we need to devise our own intervals and how the correpsond to the display capabilities of our indicator.  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-**TODO: 5 external LEDs of different colors**  
-**TODO: 2 external LEDs, one w/ 4 levels of brightness based on PWM duty cycle**  
+1. `[<lernact-prac>]`Implement the 5-external-LED reading indicator for the soil sensor.  
 
+2. `[<lernact-prac>]`**[Optional challenge, max 5 extra step points]** Implement a reading indicator for the soil sensor using 2 LEDs, one red and one green. Use PWM to vary the brightness of the green LED from high (wetter) to low (drier). Use the red LED to indicate critically dry soil.  
+
+3. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Design a moisture indicator that has the same non-linear dependency on the analog level as the comfort-vs-relative-humidity figure. Write a program. Explain your reasononing and approach.    
 
 #### 3. Present
 [[toc](#table-of-contents)]
+
+In the [programs](programs) directory:
+
+1. Add your program from 6.2.1 with filename `microbit-program-6-2-1.js`.  
+2. Add your program from 6.2.2 with filename `microbit-program-6-2-2.js`.  
+3. Add your program from 6.2.3 with filename `microbit-program-6-2-3.js`.  
+
+In the [Lab Notebook](README.md) and the [images](images) directory:
+
+1. Link to the program from 6.2.1.  
+2. Link to a demo video of the operation of the program from 6.2.1.  
+3. Link to the program from 6.2.2.  
+4. Link to a demo video of the operation of the program from 6.2.2.  
+5. Link to the program from 6.2.3.  
+6. Link to a demo video of the operation of the program from 6.2.3.  
+7. Show all your work for 6.2.3.  
+
 
 ### Step 7: Logic gates out of transistors  
 [[toc](#table-of-contents)]
