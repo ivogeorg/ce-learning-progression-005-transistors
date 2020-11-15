@@ -242,7 +242,7 @@ In the [Lab Notebook](README.md):
 8. Link to the program from 2.2.4.  
 9. Link to a demo video of the operation of the program from 2.2.4.  
 10. Show all your measurements from 2.1.4.  
-11. Record a video of the circuit from 2.2.5 operating in the simulator with V<sub>B</sub> and V<sub>C<sub> shown in scopes and switch open and closed.  
+11. Record a video of the circuit from 2.2.5 operating in the simulator with V<sub>B</sub> and V<sub>C</sub> shown in scopes and switch open and closed.  
  
 
 ### Step 3: Soil sensor  
