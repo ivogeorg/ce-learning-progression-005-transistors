@@ -353,13 +353,33 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 #### 1. Study
 [[toc](#table-of-contents)]
 
+`[<lernact-rd>]`Sensors often generate incomprehensible readings, so they have to be couched into an easiliy interpretable calibration process to make sense to the user. In this step we tend to the user experience.
+
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-**TODO: Program for user-assisted auto calibration before operation**
+1. `[<lernact-prac>]`Write a program to automatically calibrate the soil sensor, with the manual assistance of the user, as shown in this [demo video](https://msudenver.yuja.com/V/Video?v=2191203&node=8088853&a=1177959818&autoplay=1). Hints:
+   1. The calibration should be done only once before continous operation of the sensor.  
+   2. The two arrows indicate whether the program is recording a high (wet) or low (dry) reading.   
+   3. Note that the reading should be taken while an arrow is showing and the wet or dry condition should not be changed until the arrow disappears. Consider using a loop with pauses that are too short compared to human reaction, as shown here:
+      ```javascript
+      for (let k=0; k<=300; k++) {
+          reading = pins.analogReadPin(SIG)
+          pause(10)
+      }
+      ```
 
 #### 3. Present
 [[toc](#table-of-contents)]
+
+In the [programs](programs) directory:
+
+1. Add your program from 5.2.1 with filename `microbit-program-5-2-1.js`.  
+
+In the [Lab Notebook](README.md) and the [images](images) directory:
+
+1. Link to the program from 5.2.1.  
+2. Link to a demo video of the operation of the program from 5.2.1.  
 
 
 ### Step 6: Sensor reading  
