@@ -136,6 +136,8 @@ We will exclusively focus on the so-called `[<cept>]`_bipolar-junction transisto
 
 For the NPN transistor, V<sub>BE</sub> = + 0.7 V and the base current flows out of the base. For the PNP transistor, V<sub>BE</sub> = - 0.7 V (or V<sub>EB</sub> = + 0.7 V) and the base current flows into the base.
 
+Sparkfun has an excellent, accessible thought thorough, [introduction to transistors](https://learn.sparkfun.com/tutorials/transistors) tutorial that is highly recommended for getting a deeper understanding of these simple devices as well as a survey of their wide array of applications.  
+
 ##### Field-effect transistors
 
 `[<lernact-see>]`Video of [MOSFET operation](https://www.youtube.com/watch?v=stM8dgcY1CA).  
@@ -211,7 +213,7 @@ Note the following:
    2. With P11 **off** (that is, outputing logical 0 or approximately 0.0V): 
       1. V<sub>C</sub>.  
       2. V<sub>B</sub>.  
-      1. V<sub>E</sub>. Calculate V<sub>BE</sub>. Is it what you expected from your knowledge of BJTs?    
+      3. V<sub>E</sub>. Calculate V<sub>BE</sub>. Is it what you expected from your knowledge of BJTs?    
 
 2. `[<lernact-prac>]`In the same circuit, run P11 as an `analogWritePin` with levels in the whole range [0, 1023]. Identify at what output level P11 turns on the LED (that is, the LED is visibly shining). For this level, what is the actual voltage at the pin?  
 
@@ -251,23 +253,65 @@ In the [Lab Notebook](README.md):
 #### 1. Study
 [[toc](#table-of-contents)]
 
-- [guide](https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide) (note, it's for a different board)   
-- schematic  
+##### Transistor-based sensor
 
-- transistor-based sensor  
-- H<sub>2</sub>O resistance  
-- simulate  
-- basic operation
-- micro:bit analog I/O  
+`[<lernact-rd>]`The next several steps will focus on an extremely simple application of a transistor: a soil moisture sensor. Here is a closeup:  
+
+Sensor front | Sensor back
+--- | ---
+<img src="images/soil-sensor-front.jpg" width="200" /> | <img src="images/soil-sensor-back.jpg" width="200" />
+Notice the following:
+1. On the front, the tiny transistor, which is at the heart of the sensor.  
+2. On both sides of the transistor, there are two resistors.  
+3. There are three electrical connections: V<sub>CC</sub>, GND, and SIG. The latter is an input signal for the micro:bit.  
+
+This is a Sparkfun sensor, so their [guide](https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide) is the best introduction. Note that the code is for a different board.  
+
+##### Sensing through base resistance
+
+Let's examine the `[<cept>]`_schematic_ of the sensor to understand exaclty how it works:
+
+<img src="images/soil-sensor-schematic.jpg" width="400" />
+
+Notice the following:
+1. The transistor is the familiar NPN 2N3904.  
+2. The two prongs, when connected through a resisting medium (say, water) form a high-resistance _base resistor_. Remember that the base current regulates the collector current. By Ohm's law, holding the input voltage the same (in this case ~3.3V) and varying the base resistance will vary the base current, which in turn will vary the collector current. This is the key to the operation of the sensor. When the sensor's prongs are dipped in water, the water has some resistance, but enough to conduct the base current and open the collector-emitter current channel. When the soil is taken out of any conducting medium, the resistance between the prongs is very large (near infinite) and there is no base current to activate the collector current.  
+3. Finally, the signal is read at the transistor emitter, across a 10 kOhm resistor from ground. The reading is as follows:
+   1. When the base has non-infinite resistance, base current flows, and so collector current flows, the voltage at the signal reading point is close to V<sub>CC</sub>, since there is only the low transistor resistance to drop the voltage across the collector-emitter junction.  
+   2. When the base has near infinite resistance, base current doesn't flow, and so no collector flows either, forcing the voltage at the signal reading point to ground, as no current flows through the emitter resistor to raise the voltage.  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-**TODO: complete the guide**  
-**TODO: simulate in CircuitJS  (with a gate resistor slider)**    
+1. `[<lernact-prac>]`Complete the sensor guide, using an analog read pin and displaying the raw readings on the micro:bit screen.  
+
+2. `[<lernact-prac>]`Try to measure the resistance of water as shown in these images:
+   Maximum measurable resistance | Measurement maxed out
+   --- | ---
+   <img src="images/resistance-max.jpg" width="300" /> | <img src="images/resistance-maxed-out.jpg" width="300" /> 
+   Do some research to find the resistance of fresh water. Do you expect salt water to have higher or lower resistance?  
+   
+3. `[<lernact-prac>]`**[Optional challenge, max 3 extra points]** Measure V<sub>B</sub> and V<sub>E</sub> during operation.  
+
+4. `[<lernact-prac>]`**[Optional challenge, max 5 extra points]** Measure I<sub>B</sub> and I<sub>E</sub> during operation. _Be careful._    
+
+5. `[<lernact-prac>]`**[Optional challenge, max 10 extra points]** Draw and simulate the sensor circuit with the [CircuitJS simulator](http://lushprojects.com/circuitjs/circuitjs.html), creating a slider for the base resistance and a scope for the signal reading point.   
 
 #### 3. Present
 [[toc](#table-of-contents)]
+
+In the [programs](programs) directory:
+
+1. Add your program from 3.2.1 with filename `microbit-program-3-2-1.js`.  
+
+In the [Lab Notebook](README.md) and the [images](images) directory:
+
+1. Link to the program from 3.2.1.  
+2. Link to a demo video of the operation of the program from 3.2.1.  
+3. Show all your work for 3.1.2.  
+4. Embed an image of your setup and show your measurements from 3.1.3.  
+5. Embed an image of your setup and show your measurements from 3.1.4.  
+6. Record a video of the circuit from 3.2.5 operating in the simulator with V<sub>SIG</sub> shown in a scope and the R<sub>B</sub> slider moved over its range.  
 
 
 ### Step 4: Manual calibration of soil sensor  
