@@ -2,87 +2,6 @@
 
 This is learning progression 004 for the Fall 2020 installment of the course CPE 1040: Introduction to Computer Engineering at MSU Denver.
 
-Table of Contents
-=================
-
-* [CPE 1040 \- Fall 2020](#cpe-1040---fall-2020)
-  * [Learning Progression 005: Transistors](#learning-progression-005-transistors)
-  * [Lab kit](#lab-kit)
-    * [Parts for progression](#parts-for-progression)
-  * [Steps](#steps)
-    * [Step 1: Transistors](#step-1-transistors)
-      * [1\. Study](#1-study)
-        * [Semiconductors](#semiconductors)
-        * [The diode](#the-diode)
-        * [The transistor](#the-transistor)
-        * [Field\-effect transistors](#field-effect-transistors)
-        * [A note on current direction](#a-note-on-current-direction)
-      * [2\. Apply](#2-apply)
-      * [3\. Present](#3-present)
-    * [Step 2: BJT circuits](#step-2-bjt-circuits)
-      * [1\. Study](#1-study-1)
-      * [2\. Apply](#2-apply-1)
-      * [3\. Present](#3-present-1)
-    * [Step 3: Soil sensor](#step-3-soil-sensor)
-      * [1\. Study](#1-study-2)
-        * [Transistor\-based sensor](#transistor-based-sensor)
-        * [Sensing through base resistance](#sensing-through-base-resistance)
-      * [2\. Apply](#2-apply-2)
-      * [3\. Present](#3-present-2)
-    * [Step 4: Manual calibration of soil sensor](#step-4-manual-calibration-of-soil-sensor)
-      * [1\. Study](#1-study-3)
-      * [2\. Apply](#2-apply-3)
-      * [3\. Present](#3-present-3)
-    * [Step 5: Automatic calibration of soil sensor](#step-5-automatic-calibration-of-soil-sensor)
-      * [1\. Study](#1-study-4)
-      * [2\. Apply](#2-apply-4)
-      * [3\. Present](#3-present-4)
-    * [Step 6: Sensor reading](#step-6-sensor-reading)
-      * [1\. Study](#1-study-5)
-        * [Reading intervals](#reading-intervals)
-        * [Pulse\-width modulation](#pulse-width-modulation)
-        * [Non\-linear mapping](#non-linear-mapping)
-      * [2\. Apply](#2-apply-5)
-      * [3\. Present](#3-present-5)
-    * [Step 7: Logic gates out of transistors](#step-7-logic-gates-out-of-transistors)
-      * [1\. Study](#1-study-6)
-        * [Logical functions](#logical-functions)
-        * [Boolean algebra](#boolean-algebra)
-        * [Gates out of transistors](#gates-out-of-transistors)
-      * [2\. Apply](#2-apply-6)
-      * [3\. Present](#3-present-6)
-    * [Step 8: Half adder and full adder](#step-8-half-adder-and-full-adder)
-      * [1\. Study](#1-study-7)
-        * [Half adder](#half-adder)
-        * [Truth table](#truth-table)
-        * [Sum of minterms](#sum-of-minterms)
-        * [Minimal number of gates](#minimal-number-of-gates)
-        * [Full adder](#full-adder)
-      * [2\. Apply](#2-apply-7)
-      * [3\. Present](#3-present-7)
-    * [Step 9: Simulated logic gates](#step-9-simulated-logic-gates)
-      * [1\. Study](#1-study-8)
-        * [Booleans revisited](#booleans-revisited)
-        * [Order of operatins](#order-of-operatins)
-        * [Test setup](#test-setup)
-        * [Funcionally complete set](#funcionally-complete-set)
-      * [2\. Apply](#2-apply-8)
-      * [3\. Present](#3-present-8)
-    * [Step 10: Full adder emulation](#step-10-full-adder-emulation)
-      * [1\. Study](#1-study-9)
-      * [2\. Apply](#2-apply-9)
-      * [3\. Present](#3-present-9)
-    * [Step 11: ALU bit slice](#step-11-alu-bit-slice)
-      * [1\. Study](#1-study-10)
-        * [Function selection](#function-selection)
-        * [I/O](#io)
-        * [Control lines](#control-lines)
-      * [2\. Apply](#2-apply-10)
-      * [3\. Present](#3-present-10)
-    * [Step 12: Emulated 4\-bit ALU](#step-12-emulated-4-bit-alu)
-      * [1\. Study](#1-study-11)
-      * [2\. Apply](#2-apply-11)
-      * [3\. Present](#3-present-11)
 
 
 ## Learning Progression 005: Transistors
@@ -572,12 +491,12 @@ Show the process for the half-adder, all steps and whatever theory is necessary.
 
 - simulating connections    
 
-##### Test setup
+##### Functional test setup
 [[toc](#table-of-contents)]  
 
 - `logic` function  
 
-##### Funcionally complete set
+##### Functionally complete sets
 [[toc](#table-of-contents)]  
 
 [functional completeness](https://en.wikipedia.org/wiki/Functional_completeness):
@@ -668,8 +587,13 @@ In the [Lab Notebook](README.md) and [images](images) directory:
 #### 1. Study
 [[toc](#table-of-contents)]  
 
+##### Multiplexor
 - composition TBD  
 - multiplexor  
+
+##### 2s complement
+
+##### Overflow
 
 #### 2. Apply
 [[toc](#table-of-contents)]  
