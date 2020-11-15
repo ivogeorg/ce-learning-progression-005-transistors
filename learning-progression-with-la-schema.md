@@ -289,6 +289,7 @@ Notice the following:
    Maximum measurable resistance | Measurement maxed out
    --- | ---
    <img src="images/resistance-max.jpg" width="400" /> | <img src="images/resistances-maxed-out.jpg" width="400" /> 
+   
    Do some research to find the resistance of fresh water. Do you expect salt water to have higher or lower resistance?  
    
 3. `[<lernact-prac>]`**[Optional challenge, max 3 extra points]** Measure V<sub>B</sub> and V<sub>E</sub> during operation.  
