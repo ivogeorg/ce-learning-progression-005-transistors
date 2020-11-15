@@ -2,7 +2,85 @@
 
 This is learning progression 004 for the Fall 2020 installment of the course CPE 1040: Introduction to Computer Engineering at MSU Denver.
 
+Table of Contents
+=================
 
+* [CPE 1040 \- Fall 2020](#cpe-1040---fall-2020)
+  * [Learning Progression 005: Transistors](#learning-progression-005-transistors)
+  * [Lab kit](#lab-kit)
+    * [Parts for progression](#parts-for-progression)
+  * [Steps](#steps)
+    * [Step 1: Transistors](#step-1-transistors)
+      * [1\. Study](#1-study)
+        * [Semiconductors](#semiconductors)
+        * [The diode](#the-diode)
+        * [The transistor](#the-transistor)
+        * [Field\-effect transistors](#field-effect-transistors)
+        * [A note on current direction](#a-note-on-current-direction)
+      * [2\. Apply](#2-apply)
+      * [3\. Present](#3-present)
+    * [Step 2: BJT circuits](#step-2-bjt-circuits)
+      * [1\. Study](#1-study-1)
+      * [2\. Apply](#2-apply-1)
+      * [3\. Present](#3-present-1)
+    * [Step 3: Soil sensor](#step-3-soil-sensor)
+      * [1\. Study](#1-study-2)
+        * [Transistor\-based sensor](#transistor-based-sensor)
+        * [Sensing through base resistance](#sensing-through-base-resistance)
+      * [2\. Apply](#2-apply-2)
+      * [3\. Present](#3-present-2)
+    * [Step 4: Manual calibration of soil sensor](#step-4-manual-calibration-of-soil-sensor)
+      * [1\. Study](#1-study-3)
+      * [2\. Apply](#2-apply-3)
+      * [3\. Present](#3-present-3)
+    * [Step 5: Automatic calibration of soil sensor](#step-5-automatic-calibration-of-soil-sensor)
+      * [1\. Study](#1-study-4)
+      * [2\. Apply](#2-apply-4)
+      * [3\. Present](#3-present-4)
+    * [Step 6: Sensor reading](#step-6-sensor-reading)
+      * [1\. Study](#1-study-5)
+        * [Reading intervals](#reading-intervals)
+        * [Pulse\-width modulation](#pulse-width-modulation)
+        * [Non\-linear mapping](#non-linear-mapping)
+      * [2\. Apply](#2-apply-5)
+      * [3\. Present](#3-present-5)
+    * [Step 7: Logic gates out of transistors](#step-7-logic-gates-out-of-transistors)
+      * [1\. Study](#1-study-6)
+        * [Logical functions](#logical-functions)
+        * [Boolean algebra](#boolean-algebra)
+        * [Gates out of transistors](#gates-out-of-transistors)
+      * [2\. Apply](#2-apply-6)
+      * [3\. Present](#3-present-6)
+    * [Step 8: Half adder and full adder](#step-8-half-adder-and-full-adder)
+      * [1\. Study](#1-study-7)
+        * [Truth table](#truth-table)
+        * [Sum of minterms](#sum-of-minterms)
+        * [Minimal number of gates](#minimal-number-of-gates)
+      * [2\. Apply](#2-apply-7)
+      * [3\. Present](#3-present-7)
+    * [Step 9: Simulated logic gates](#step-9-simulated-logic-gates)
+      * [1\. Study](#1-study-8)
+        * [Booleans revisited](#booleans-revisited)
+        * [Order of operatins](#order-of-operatins)
+        * [Test setup](#test-setup)
+        * [Funcionally complete set](#funcionally-complete-set)
+      * [2\. Apply](#2-apply-8)
+      * [3\. Present](#3-present-8)
+    * [Step 10: Full adder emulation](#step-10-full-adder-emulation)
+      * [1\. Study](#1-study-9)
+      * [2\. Apply](#2-apply-9)
+      * [3\. Present](#3-present-9)
+    * [Step 11: ALU bit slice](#step-11-alu-bit-slice)
+      * [1\. Study](#1-study-10)
+        * [Function selection](#function-selection)
+        * [I/O](#io)
+        * [Control lines](#control-lines)
+      * [2\. Apply](#2-apply-10)
+      * [3\. Present](#3-present-10)
+    * [Step 12: Emulated 4\-bit ALU](#step-12-emulated-4-bit-alu)
+      * [1\. Study](#1-study-11)
+      * [2\. Apply](#2-apply-11)
+      * [3\. Present](#3-present-11)
 
 
 ## Learning Progression 005: Transistors
@@ -41,6 +119,7 @@ The lab kit is described in detail in a [separate page](lab-kit.md). Please, mak
 _Note: Watching the videos referenced at the begging of sections is the best way to understand this material. In some cases, there may be multiple videos that cover the same material, to give you extra depth. The text below briefly covers the main points, without going into detail._
 
 ##### Semiconductors
+[[toc](#table-of-contents)]  
 
 `[<lernact-see>]`Video of [semiconductor operation](https://www.youtube.com/watch?v=33vbFFFn04k) by [Ben Eater](https://eater.net/).    
 
@@ -53,12 +132,14 @@ When p-doped and n-doped regions are created next to each other, interesting ele
 Semiconductor `[<cept>]`_fabrication_ is a complex process. This [booklet](https://www.halbleiter.org/en/) is an accessible first look at the different steps.  
 
 ##### The diode
+[[toc](#table-of-contents)]  
 
 `[<lernact-see>]`Video of [bipolar diode operation](https://www.youtube.com/watch?v=-SSkjWuUri4).  
 
 `[<lernact-rd>]`Diodes are elements which conduct current in only one direction. The simplest diodes are just PN junctions. The N side is called a `[<cept>]`_cathode_, while the P side is called the `[<cept>]`_anode_. When positive voltage is applied from cathode to anode, that is  + NP -, the excess electrons in the cathode region are attracted to the positive voltage terminal, drawing away from the center region of the diode. Similarly, the excess of holes (that is, the dearth of electrons) are attracted to the negative terminal, also drawing away from the center region. As a result, the depletion region, which is the center area where excess electrons recombine with excess holes to make the region electrically neutral, grows and prevents the flow of current through the diode. When voltage is applied in the opposite direction, that is - NP +, the depletion region shrinks or disappears completely, and current can flow.
 
 ##### The transistor
+[[toc](#table-of-contents)]  
 
 `[<lernact-see>]`Video of [transistor operation](https://www.youtube.com/watch?v=DXvAlwMAxiA) by [Ben Eater](https://eater.net/).  
 `[<lernact-see>]`Video of [transistor operation](https://www.youtube.com/watch?v=7ukDKVHnac4).  
@@ -77,12 +158,15 @@ For the NPN transistor, V<sub>BE</sub> = + 0.7 V and the base current flows out 
 Sparkfun has an excellent, accessible thought thorough, [introduction to transistors](https://learn.sparkfun.com/tutorials/transistors) tutorial that is highly recommended for getting a deeper understanding of these simple devices as well as a survey of their wide array of applications.  
 
 ##### Field-effect transistors
+[[toc](#table-of-contents)]  
+
 
 `[<lernact-see>]`Video of [MOSFET operation](https://www.youtube.com/watch?v=stM8dgcY1CA).  
 
 `[<lernact-rd>]`As opposed to BJTs, `[<cept>]`_field-effect transistors (FETs)_ do not have base current. Instead, they employ variable voltage applied to the `[<cept>]`_gate_ terminal (analagous to the base in BJTs) to shrink or expand the conducting region between the other two terminals, the `[<cept>]`_source_ (analogous to the emitter in BJTs) and the `[<cept>]`_drain_ (analogous to the collector in BJTs).
 
 ##### A note on current direction
+[[toc](#table-of-contents)]  
 
 `[<lernact-rd>]`The convention is that `[<cept>]`_positive current_ flows in the direction opposite the flow of the electron charges. It is good practice to check whether a material refers to `[<cept>]`_conventional current_ or not.  
 
@@ -192,6 +276,7 @@ In the [Lab Notebook](README.md):
 [[toc](#table-of-contents)]
 
 ##### Transistor-based sensor
+[[toc](#table-of-contents)]  
 
 `[<lernact-rd>]`The next several steps will focus on an extremely simple application of a transistor: a soil moisture sensor. Here is a closeup:  
 
@@ -206,6 +291,7 @@ Notice the following:
 This is a Sparkfun sensor, so their [guide](https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide) is the best introduction. Note that the code is for a different board.  
 
 ##### Sensing through base resistance
+[[toc](#table-of-contents)]  
 
 Let's examine the `[<cept>]`_schematic_ of the sensor to understand exaclty how it works:
 
@@ -263,8 +349,6 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 
 #### 2. Apply
 [[toc](#table-of-contents)]
-
-**TODO: Manual calibration (with `map`) and bars**  
 
 1. `[<lernact-prac>]`Calibrate manually the sensor readings and show 5 different levels of moisure as horizontal bars on the micro:bit screen, as can be seen in this [demo video](https://msudenver.yuja.com/V/Video?v=2190790&node=8088057&a=1401135328&autoplay=1). Hints:
    1. Use the `pins.map()` function to map the range of signals from the soil sensor to the range [0, 4] of the height of the bars.  
@@ -329,6 +413,7 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 `[<lernact-rd>]`While sensors can be calibrated and their data presented to the user coninuously, this may not be ideal for the amount of user attention they resume. It is often better to design the user interface to only alert the user when critical conditions are detected while blending into the background at other times. In this step we will explore how we can do that with the soil sensor, utilizing external LED reading indicators.  
 
 ##### Reading intervals
+[[toc](#table-of-contents)]  
 
 Let's assume that we have 5 external LEDs and we use the `pins.map()` function. If we pick the LED colors to form a smooth transition along the rainbow sequence, say red-orange-yellow-green-violet, this may be a simple way to achieve the goal of creating an intuitive and inobtrusive reading indicator. 
 
@@ -347,6 +432,7 @@ The mapping function `pins.map()` is converting from a source range roughly simi
 **Question 5.1.4:** How would you modify the result of the `map` function to work as an index?  
 **Question 5.1.5:** In the context of these questions, what do you think the `led.plot(x, y)` and `led.unplot(x, y)` functions do to their arguments `x` and `y`?  
 ##### Pulse-width modulation
+[[toc](#table-of-contents)]  
 
 What if we want a continuous moisture indicator, so that we can monitor precisely the process of soil desiccation? There is a very ingenuous way to smoothly vary the power sent to an LED, resulting in a smooth variation of its brightness, called `[<cept>]`_pulse-width modulation_. Here is a code example:
 ```javascript
@@ -367,6 +453,7 @@ Run it with a load circuit (330 Ohm + LED) from analog pin `P0`. What is actuall
 The voltage varies in a very specific manner: every 20 ms, a pulse of 3.3V and duration of 1.5 ms is sent. When the pulses are short, the LED at the pin outputing this signal is dark. As the pulse width grows, so does the brightness of the LED.
 
 ##### Non-linear mapping
+[[toc](#table-of-contents)]  
 
 What if the biological processes in the soil depend on the moisture content in a `[<cept>]`_non-linear_ way? This may be akin to how the feeling of comfort depends on relative humidity, as shown in the following image:
 
@@ -412,10 +499,13 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 
 `[<lernact-rd>]`Perhaps the most widely impactful application of transistors is in `[<cept>]`_logic gates_, tiny hardware devices which perform logical functions.  
 ##### Logical functions
+[[toc](#table-of-contents)]  
 
 ##### Boolean algebra
+[[toc](#table-of-contents)]  
 
 ##### Gates out of transistors
+[[toc](#table-of-contents)]  
 
 - [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
 - videos of gates from (FET) transistors  
@@ -438,13 +528,20 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 
 Show the process for the half-adder, all steps and whatever theory is necessary.  
 
+##### Half adder
+[[toc](#table-of-contents)]  
+
 ##### Truth table
+[[toc](#table-of-contents)]  
 
 ##### Sum of minterms
+[[toc](#table-of-contents)]  
 
 ##### Minimal number of gates
+[[toc](#table-of-contents)]  
 
-#####
+##### Full adder
+[[toc](#table-of-contents)]  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
@@ -457,22 +554,29 @@ Show the process for the half-adder, all steps and whatever theory is necessary.
 [[toc](#table-of-contents)]
 
 ### Step 9: Simulated logic gates
+[[toc](#table-of-contents)]  
 
 #### 1. Study
+[[toc](#table-of-contents)]  
 
 ##### Booleans revisited
+[[toc](#table-of-contents)]  
+
 - booleans for bits!
 - Boolean algebra!  
 
 ##### Order of operatins
+[[toc](#table-of-contents)]  
 
 - simulating connections    
 
 ##### Test setup
+[[toc](#table-of-contents)]  
 
 - `logic` function  
 
 ##### Funcionally complete set
+[[toc](#table-of-contents)]  
 
 [functional completeness](https://en.wikipedia.org/wiki/Functional_completeness):
 - any two of {AND, OR, NOT}  
@@ -480,6 +584,7 @@ Show the process for the half-adder, all steps and whatever theory is necessary.
 - NAND  
 
 #### 2. Apply
+[[toc](#table-of-contents)]  
 
 **TODO: Build all gates**  
 **TODO: Build XOR**  
@@ -487,28 +592,36 @@ Show the process for the half-adder, all steps and whatever theory is necessary.
 **TODO: (Challenge) Build gates out of NANDs**  
 
 #### 3. Present
+[[toc](#table-of-contents)]  
 
 
 ### Step 10: Full adder emulation
+[[toc](#table-of-contents)]  
 
 #### 1. Study
+[[toc](#table-of-contents)]  
 
 - bits and pieces of the program  
 
 #### 2. Apply
+[[toc](#table-of-contents)]  
 
 **TODO: Full-adder emulation program**
 
 #### 3. Present
+[[toc](#table-of-contents)]  
 
 
 ### Step 11: ALU bit slice
+[[toc](#table-of-contents)]  
 
 #### 1. Study
+[[toc](#table-of-contents)]  
 
 <img src="images/alu-bit-slice.png" width="300" />
 
 ##### Function selection
+[[toc](#table-of-contents)]  
 
 - all functions of an ALU  
 - multiplexor/selector/decoder  
@@ -516,12 +629,13 @@ Show the process for the half-adder, all steps and whatever theory is necessary.
 - shift  
 
 ##### I/O
+[[toc](#table-of-contents)]  
 
 ##### Control lines
-
-
+[[toc](#table-of-contents)]  
 
 #### 2. Apply
+[[toc](#table-of-contents)]  
 
 1. `[<lernact-prac>]`Trace and highlight the active lines for the NOT function in the bit-slice diagram.  
 
@@ -534,6 +648,7 @@ Show the process for the half-adder, all steps and whatever theory is necessary.
 4. `[<lernact-prac>]`**[Optional challenge, max 3 extra step points]** The same as 11.2.3 without adding any gates, so that, with the removal of the XOR gate, the new bit slice has _one gate less_.  
 
 #### 3. Present
+[[toc](#table-of-contents)]  
 
 In the [Lab Notebook](README.md) and [images](images) directory:
 
@@ -546,13 +661,16 @@ In the [Lab Notebook](README.md) and [images](images) directory:
 
 
 ### Step 12: Emulated 4-bit ALU
+[[toc](#table-of-contents)]  
 
 #### 1. Study
+[[toc](#table-of-contents)]  
 
 - composition TBD  
 - multiplexor  
 
 #### 2. Apply
+[[toc](#table-of-contents)]  
 
 1. `[<lernact-prac>]`Implement an emulator of a full adder for 4-bit unsigned integers. Requirements:
    1. Use the emulated full-adder bit slice from a previous step as a unit.  
@@ -576,6 +694,7 @@ In the [Lab Notebook](README.md) and [images](images) directory:
 4. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Implement an emulator of a 4-bit ALU using the bit slice from the previous exercise as a unit. The rest of the requirements are the same as in 12.2.1.  
 
 #### 3. Present
+[[toc](#table-of-contents)]  
 
 In the [programs](programs) directory:
 
