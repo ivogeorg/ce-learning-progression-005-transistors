@@ -110,7 +110,9 @@ _Note: Watching the videos referenced at the begging of sections is the best way
  
 Semiconductors are usually pure `[<cept>]`_chemical elements_ (like silicon, Si) which have been `[<cept>]`_doped_, that is, to which a small amount of another element has been added, to create a cumulative excess of free electrons (e.g. phosphorus, P), thus charging the material negative (`[<cept>]`_n-doping_), or a cumulative dearth of free electrons (e.g. boron, B), thus charging the material positive (`[<cept>]`_p-doping_).
  
-When p-doped and n-doped regions are created next to each other, interesting electrical behavior occurs, mostly to do with the properties of the resulting  `[<cept>]`_depletion region_ at the `[<cept>]`_p-n junction_.
+When p-doped and n-doped regions are created next to each other, interesting electrical behavior occurs, mostly to do with the properties of the resulting  `[<cept>]`_depletion region_ at the `[<cept>]`_p-n junction_.  
+
+Semiconductor `[<cept>]`_fabrication_ is a complex process. This [booklet](https://www.halbleiter.org/en/) is an accessible first look at the different steps.  
 
 ##### The diode
 
@@ -150,7 +152,7 @@ For the NPN transistor, V<sub>BE</sub> = + 0.7 V and the base current flows out 
 1. `[<lernact-texp>]`If you connect two bipolar junction diodes in series, either in PN-NP or NP-PN configuration, and connect a wire between them to act as the base, can you make a PNP or NPN transistor? Why or why not?  
 2. `[<lernact-disc>]`BJT transistors use their base current to control the main circuit current, whereas FET transistors only use voltage and have no base current. Which of the two types would you think more likely to be the choice for the production of integrated circuits (like processors and memory sticks), where transistors are packed very densely and close to each other?  
 3. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** **TODO** SRAM cell and SRAM operation...  
-4. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** How are transistor density and the `[<cept>]`_dark silicon_ problem related?  
+4. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** Processors and memory are the fundamental devices of computing. There is a constant urge to pack more and more transistors closer and closer together to get larger capacities in smaller packages. How are transistor density and the `[<cept>]`_dark silicon_ problem related?  
 
 #### 3. Present
 [[toc](#table-of-contents)]
@@ -171,23 +173,77 @@ In the [Lab Notebook](README.md):
 
 `[<lernact-see>]`Video of [NPN and PNP Transistors as `[<cept>]`_common-emitter switches_](https://www.youtube.com/watch?v=kNVaIqmKUoI)
 
-- disentangle the two loops and show the micro:bit   
+`[<lernact-rd>]`Our kit has 4 NPN and 4 PNP transistors, also LEDs and resistors. We'll use a single NPN transistor, and LED, a 330 Ohm resistor, and a 10 kOhm resistor to build our first transistor circuit. It will use a micro:bit output pin, digital or analog, to drive the circuit. In particular:
+1. The transistor base will be connected _through a large resistor of 10 kOhms_ to the micro:bit pin. The resistor makes sure that the `[<cept>]`_base current_ is very low. Larger current will damage the transistor.  
+2. The NPN transistor is a `[<cept>]`_current amplifier_, meaning that a small base current allows a much larger collector current to flow.  
+3. The LED is connected _through a small resistor of 330 Ohms_ to the 3.3V power pin of the micro:bit and the collector of the NPN transistor. The resistor again limits the size of the current that flows through the LED, protecting it from damage. This part of the circuit is usually known as the `[<cept>]`_load circuit_, in the sense that this is what the transistor is turning on and off.  
+4. Both the base current and the collector current flow into the emitter. So there are two closed loops of our circuit:  
+   1. The base loop is 3.3V -- switch (via pin on/off) -- 10 kOhm resistor -- transistor base -- transistor emitter -- ground (GND pin of the micro:bit).  
+   2. The collector loop is 3.3V -- 330 Ohm resistor -- transistor collector -- transistor emitter -- ground (GND pin of the micro:bit).  
+
+Take a look at the following sketch:
 
 <img src="images/npn-led-microbit.png" width="600" />
+
+Note the following:
+1. The micro:bit image in the sketch is without the connector, which has the pins in order.  
+2. The pins used a 3.3V, GND, and P11.  
+3. It matters how the LED and transistor are connected:  
+   1. For the LED, always connect the longer leg toward power (3.3V) and the shorter toward ground (GND).  
+   2. For the NPN transistor, read the [2N3904 datasheet](https://www.sparkfun.com/datasheets/Components/2N3904.pdf) to identify the base, collector, and emitter pins. The curved semi-cylindrical package makes this easy.    
+4. The circuit operation can be seen in [this short video](https://msudenver.yuja.com/V/Video?v=2191285&node=8088986&a=1353912353&autoplay=1).  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-**TODO:**
-1. Build NPN.  
-2. Where else can the load circuit go without changing the overall behavior?  
-3. PNP for opt.  
-4. CircuitJS opt.  
+1. `[<lernact-prac>]`Build the NPN circuit from the sketch and videos. Run P11 as `digitalWritePin`. Measure the following, in to different states: 
+   1. With P11 **on** (that is, outputing logical 1 or approximately 3.3V):  
+      1. The voltage between the 330 Ohm resistor and the LED. Calculate the voltage drop V<sub>R330</sub> across the resistor.  
+      2. The voltage between the LED and the transistor collector. This is V<sub>C</sub>. Calculate the voltage drop V<sub>LED</sub> across the LED. Does it match the specification in the LED package in the lab kit?  
+      3. The collector current I<sub>C</sub> flowing through the load circuit. Calculate the resistance of the LED.  
+      4. The voltage between the 10 kOhm resistor and the transistor base. This is V<sub>B</sub>. Calculate:
+         1. The voltage drop V<sub>R10K</sub> across the resistor.  
+         2. The voltage V<sub>CB</sub> between the collector and base.  
+         3. The voltage V<sub>CE</sub> between the collector and emitter.  
+         4. The voltage V<sub>BE</sub> between the base and emitter. Is it what you expected from your knowledge of BJTs?        
+      5. The base current I<sub>B</sub> flowing across the base resistor. Calculate the current amplification factor I<sub>C</sub>/I<sub>B</sub>.  
+      6. The emitter current I<sub>E</sub> flowing through the common segment of the two closed loops of the circuit. Does _common emitter_ ring a bell? What is the relationship of the three currents I<sub>C</sub>, I<sub>B</sub>, I<sub>E</sub>? Is is what you expected from your knowledge of BJTs?  
+   2. With P11 **off** (that is, outputing logical 0 or approximately 0.0V): 
+      1. V<sub>C</sub>.  
+      2. V<sub>B</sub>.  
+      1. V<sub>E</sub>. Calculate V<sub>BE</sub>. Is it what you expected from your knowledge of BJTs?    
 
+2. `[<lernact-prac>]`In the same circuit, run P11 as an `analogWritePin` with levels in the whole range [0, 1023]. Identify at what output level P11 turns on the LED (that is, the LED is visibly shining). For this level, what is the actual voltage at the pin?  
+
+3. `[<lernact-prac>]`Where else can the load circuit be connected in the circuit without significantly changing the overall behavior?  
+
+4. `[<lernact-prac>]`**[Optional challenge, max 7 extra step points]** Build the PNP circuit from the first video and perform the corresponding measurements as in 2.1.1. Refer to the [2N3906 datasheet](https://www.sparkfun.com/datasheets/Components/2N3906.pdf) for the terminal identification.    
+
+5. `[<lernact-prac>]`**[Optional challenge, max 7 extra step points]** Build and simulate the circuit from 2.2.1 in the [CircuitJS simulator](http://lushprojects.com/circuitjs/circuitjs.html). Use a switch in place of the micro:bit pin.      
 
 #### 3. Present
 [[toc](#table-of-contents)]
 
+In the [programs](programs) directory:
+
+1. Add your program from 2.2.1 with filename `microbit-program-2-2-1.js`.  
+2. Add your program from 2.2.2 with filename `microbit-program-2-2-2.js`.  
+3. Add your program from 2.2.4 with filename `microbit-program-2-2-4.js`.  
+
+In the [Lab Notebook](README.md):
+
+1. Show all your measurements from 2.1.1.  
+2. Link to the program from 2.2.1.  
+3. Link to a demo video of the operation of the program from 2.2.1.  
+4. Show all your measurements from 2.1.2.  
+5. Link to the program from 2.2.2.  
+6. Link to a demo video of the operation of the program from 2.2.2.  
+7. Show your work from 2.2.3.  
+8. Link to the program from 2.2.4.  
+9. Link to a demo video of the operation of the program from 2.2.4.  
+10. Show all your measurements from 2.1.4.  
+11. Record a video of the circuit from 2.2.5 operating in the simulator with V<sub>B</sub> and V<sub>C<sub> shown in scopes and switch open and closed.  
+ 
 
 ### Step 3: Soil sensor  
 [[toc](#table-of-contents)]
