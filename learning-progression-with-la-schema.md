@@ -259,7 +259,7 @@ In the [Lab Notebook](README.md):
 
 Sensor front | Sensor back
 --- | ---
-<img src="images/soil-sensor-front.jpg" width="200" /> | <img src="images/soil-sensor-back.jpg" width="200" />
+<img src="images/soil-sensor-front.jpg" width="300" /> | <img src="images/soil-sensor-back.jpg" width="300" />
 Notice the following:
 1. On the front, the tiny transistor, which is at the heart of the sensor.  
 2. On both sides of the transistor, there are two resistors.  
@@ -271,7 +271,7 @@ This is a Sparkfun sensor, so their [guide](https://learn.sparkfun.com/tutorials
 
 Let's examine the `[<cept>]`_schematic_ of the sensor to understand exaclty how it works:
 
-<img src="images/soil-sensor-schematic.jpg" width="400" />
+<img src="images/soil-sensor-schematic.jpg" width="800" />
 
 Notice the following:
 1. The transistor is the familiar NPN 2N3904.  
@@ -288,7 +288,7 @@ Notice the following:
 2. `[<lernact-prac>]`Try to measure the resistance of water as shown in these images:
    Maximum measurable resistance | Measurement maxed out
    --- | ---
-   <img src="images/resistance-max.jpg" width="300" /> | <img src="images/resistance-maxed-out.jpg" width="300" /> 
+   <img src="images/resistance-max.jpg" width="400" /> | <img src="images/resistances-maxed-out.jpg" width="400" /> 
    Do some research to find the resistance of fresh water. Do you expect salt water to have higher or lower resistance?  
    
 3. `[<lernact-prac>]`**[Optional challenge, max 3 extra points]** Measure V<sub>B</sub> and V<sub>E</sub> during operation.  
