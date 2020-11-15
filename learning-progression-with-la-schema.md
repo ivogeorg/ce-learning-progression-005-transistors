@@ -466,12 +466,18 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 6. Link to a demo video of the operation of the program from 6.2.3.  
 7. Show all your work for 6.2.3.  
 
-
 ### Step 7: Logic gates out of transistors  
 [[toc](#table-of-contents)]
 
 #### 1. Study
 [[toc](#table-of-contents)]
+
+`[<lernact-rd>]`Perhaps the most widely impactful application of transistors is in `[<cept>]`_logic gates_, tiny hardware devices which perform logical functions.  
+##### Logical functions
+
+##### Boolean algebra
+
+##### Gates out of transistors
 
 - [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
 - videos of gates from (FET) transistors  
@@ -485,6 +491,7 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 
 #### 3. Present
 [[toc](#table-of-contents)]
+
 
 ### Step 8: Half adder and full adder
 
