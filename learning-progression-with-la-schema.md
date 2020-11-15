@@ -283,7 +283,7 @@ Notice the following:
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-1. `[<lernact-prac>]`Complete the sensor guide, using an analog read pin and displaying the raw readings on the micro:bit screen.  
+1. `[<lernact-prac>]`Complete the sensor guide, using an analog read pin and displaying the raw readings on the micro:bit screen, as can be seen in this [demo video](https://msudenver.yuja.com/V/Video?v=2190593&node=8087669&a=695880639&autoplay=1).   
 
 2. `[<lernact-prac>]`Try to measure the resistance of water as shown in these images:
    Maximum measurable resistance | Measurement maxed out
@@ -321,13 +321,30 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 #### 1. Study
 [[toc](#table-of-contents)]
 
+`[<lernact-rd>]`We already mentioned analog-to-digital conversion (ADC) in a previous step. The analog signals (e.g. the soil sensor SIG line) that are input to the micro:bit are necessarily passed through an ADC and converted to numbers in the range [0, 1023]. This is an arbitrary range and the numbers don't really mean anything until we `[<cept>]`_calibrate_ them for our purposes. We mostly want to know whether our pot of dirt is dry or moist, not that it is, say, 324.  
+
 #### 2. Apply
 [[toc](#table-of-contents)]
 
 **TODO: Manual calibration (with `map`) and bars**  
 
+1. `[<lernact-prac>]`Calibrate manually the sensor readings and show 5 different levels of moisure as horizontal bars on the micro:bit screen, as can be seen in this [demo video](https://msudenver.yuja.com/V/Video?v=2190790&node=8088057&a=1401135328&autoplay=1). Hints:
+   1. Use the `pins.map()` function to map the range of signals from the soil sensor to the range [0, 4] of the height of the bars.  
+   2. Take several readings of dry and water each, and use their averages for the input range in `pins.map()`. Do you see any difference in the operation if you use the minimum dry value and the maximum wet value?  
+   3. Can you get intermediate readings (say, 2-3 bars)?  
+
 #### 3. Present
 [[toc](#table-of-contents)]
+
+In the [programs](programs) directory:
+
+1. Add your program from 4.2.1 with filename `microbit-program-4-2-1.js`.  
+
+In the [Lab Notebook](README.md) and the [images](images) directory:
+
+1. Link to the program from 4.2.1.  
+2. Link to a demo video of the operation of the program from 4.2.1.  
+3. Answer the questions in 4.2.1.  
 
 
 ### Step 5: Automatic calibration of soil sensor
