@@ -736,9 +736,9 @@ Note that:
 
 4. `[<lernact-prac>]`**[Optional challenge, max 5 extra step points]** Write the minterm equation for the S output of the full adder, minimize it, and show a sketch of the minimal logic gates.
 
-5. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Following the example for the half adder, construct a half `[<cept>]`_subtractor_.  
+5. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Following the example for the half adder, construct a half `[<cept>]`_subtractor_. The outputs are D (for difference) and B<sub>OUT</sub> (for `[<cept>]`_borrow_-out).    
 
-6. `[<lernact-prac>]`**[Optional challenge, max 15 extra step points]** Following the example for the full adder, construct a full subtractor.  
+6. `[<lernact-prac>]`**[Optional challenge, max 15 extra step points]** Following the example for the full adder, construct a full subtractor. Note that instead of the carry-in input of the full adder, the full subtactor has a borrow-in input. 
 
 #### 3. Present
 [[toc](#table-of-contents)]
@@ -822,7 +822,7 @@ To achieve the same evaluation, we need to call our functions in the order the o
 
 In hardware, logic gates are connected to each other through wires. In our simulation, the connections are implicit in the nested calls of our simulation functions. The expression above can be shown as the follwing `[<cept>]`_signal-flow_ diagram:
 
-<img src="images/xor-out-of-gates.jpg" width="800" />
+<img src="images/xor-out-of-gates.jpg" width="800" />  
 
 ##### Functionally complete sets
 [[toc](#table-of-contents)]  
@@ -839,13 +839,57 @@ In fact, in hardware, all gates and other computing devices are built out of NAN
 #### 2. Apply
 [[toc](#table-of-contents)]  
 
-**TODO: Build all gates**  
-**TODO: Build XOR**  
-**TODO: (Challenge) Build OR out of AND and OR**  
-**TODO: (Challenge) Build gates out of NANDs**  
+1. `[<lernact-prac>]`With simulated gates, the gate function is internal to the micro:bit. Modify the `logic` program from Example 7.1.1 to light an external LED when a simulated gate outputs `true` (or 1). Using Button A to cycle through the 4 functions, show:
+   1. The simulated AND operating.  
+   2. The simulated OR operating.  
+   3. The simulated NOT operating.  
+   4. The simulated XOR operating.  
 
+2. `[<lernact-prac>]`Write a NOR() gate function out of the functional set {OR, NOT} and show its operation.  
+
+3. `[<lernact-prac>]`Write a NAND() gate function out of the functional set {AND, NOT} and show its operation.  
+
+4. `[<lernact-prac>]`Write alternative XOR() gate function as shown in the [Wikipedia article](https://en.wikipedia.org/wiki/XOR_gate#Alternatives) and show its operation.    
+
+5. `[<lernact-prac>]`**[Optional challenge, max 3 extra step points]** Implement the AND() gate function using the functional set {OR, NOT} and show its operation. 
+
+6. `[<lernact-prac>]`**[Optional challenge, max 5 extra step points]** Implement the AND() gate function using the functional set {NOR} and show its operation.  
+
+7. `[<lernact-prac>]`**[Optional challenge, max 7 extra step points]** Implement the AND() gate function using the functional set {NAND} and show its operation.   
+
+8. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Implement the NOR() gate function using the functional set {NAND} and show its operation.   
 #### 3. Present
 [[toc](#table-of-contents)]  
+
+In the [programs](programs) directory:
+
+1. Add your program from 9.2.1 with filename `microbit-program-9-2-1.js`.  
+2. Add your program from 9.2.2 with filename `microbit-program-9-2-2.js`.  
+3. Add your program from 9.2.3 with filename `microbit-program-9-2-3.js`.  
+4. Add your program from 9.2.4 with filename `microbit-program-9-2-4.js`.  
+5. Add your program from 9.2.5 with filename `microbit-program-9-2-5.js`.  
+6. Add your program from 9.2.6 with filename `microbit-program-9-2-6.js`.  
+7. Add your program from 9.2.7 with filename `microbit-program-9-2-7.js`.  
+8. Add your program from 9.2.8 with filename `microbit-program-9-2-8.js`.  
+
+In the [Lab Notebook](README.md):
+
+1. Link to the program from 9.2.1.  
+2. Link to demo video showing the operation of the program from 9.2.1.  
+1. Link to the program from 9.2.2.  
+2. Link to demo video showing the operation of the program from 9.2.2.  
+1. Link to the program from 9.2.3.  
+2. Link to demo video showing the operation of the program from 9.2.3.  
+1. Link to the program from 9.2.4.  
+2. Link to demo video showing the operation of the program from 9.2.4.  
+1. Link to the program from 9.2.5.  
+2. Link to demo video showing the operation of the program from 9.2.5.  
+1. Link to the program from 9.2.6.  
+2. Link to demo video showing the operation of the program from 9.2.6.  
+1. Link to the program from 9.2.7.  
+2. Link to demo video showing the operation of the program from 9.2.7.  
+1. Link to the program from 9.2.8.  
+2. Link to demo video showing the operation of the program from 9.2.8.  
 
 
 ### Step 10: Full adder emulation
