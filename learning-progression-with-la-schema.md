@@ -706,7 +706,8 @@ What does this all mean? Let's take it apart:
 
 The raw minterm expression would be extremely wasteful of gates: 4 3-input AND gates for the minterms and then 1 4-input OR gate. Using the laws of Boolean algebra, as shown in this table, 
 
-<img src="images/boolean-laws.gif" width="300" />
+<img src="images/boolean-laws.gif" width="300" />  
+[[Image credit](http://studytronics.weebly.com/boolean-algebra.html)]  
 
 the expression can be reduced to just a few 2-input gates, as follows:
 
@@ -724,12 +725,37 @@ Note that:
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-**TODO: Full adder**
-**TODO: Half subtractor**
-**TODO: Full subtractor**
+1. `[<lernact-prac>]`Using the laws of Boolean algebra, prove that a 3-input AND gate is equivalent to 2 2-input AND gates, connected as follows:
+   
+   <img src="images/3-and-animation.gif" width="300" />  
+   [[Image credit](https://learn.sparkfun.com/tutorials/logicblocks-experiment-guide/2-3-input-and-gate)]  
+   
+2. `[<lernact-prac>]`Prove that 8.2.1 can be extended to and AND gate with any number of inputs and one output.  
+
+3. `[<lernact-prac>]`Build a 4-input AND gate out of NPN transistors and a load circuit, driven by micro:bit pins.  
+
+4. `[<lernact-prac>]`**[Optional challenge, max 5 extra step points]** Write the minterm equation for the S output of the full adder, minimize it, and show a sketch of the minimal logic gates.
+
+5. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Following the example for the half adder, construct a half `[<cept>]`_subtractor_.  
+
+6. `[<lernact-prac>]`**[Optional challenge, max 15 extra step points]** Following the example for the full adder, construct a full subtractor.  
 
 #### 3. Present
 [[toc](#table-of-contents)]
+
+In the [programs](programs) directory:
+
+1. Add your program from 8.2.3 with filename `microbit-program-8-2-3.js`.  
+
+In the [Lab Notebook](README.md):
+
+1. Show all your work for 8.2.1.  
+2. Show all your work for 8.2.2.  
+3. Link to the program from 8.2.3.  
+4. Link to demo video showing the operation of the program from 8.2.3.  
+5. Show all your work for 8.2.4.  
+6. Show all your work for 8.2.5.  
+
 
 ### Step 9: Simulated logic gates
 [[toc](#table-of-contents)]  
