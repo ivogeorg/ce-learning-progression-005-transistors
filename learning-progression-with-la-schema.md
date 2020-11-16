@@ -82,7 +82,7 @@ Table of Contents
       * [3\. Present](#3-present-10)
     * [Step 12: Emulated 4\-bit ALU](#step-12-emulated-4-bit-alu)
       * [1\. Study](#1-study-11)
-        * [Multiplexor](#multiplexor)
+        * [Stacking bit slices](#stacking-bit-slices)
         * [2s complement](#2s-complement)
         * [Overflow](#overflow)
       * [2\. Apply](#2-apply-11)
@@ -1070,7 +1070,7 @@ In the [Lab Notebook](README.md) and [images](images) directory:
 
 `[<lernact-rc>]`The ALU is composed out of ALU bit slices. There is a bit slice for each one of the number of bits the processor word. In this step, we will build a 4-bit ALU.  
 
-##### Multiplexor
+##### Stacking bit slices
 - composition TBD  
 - multiplexor  
 
