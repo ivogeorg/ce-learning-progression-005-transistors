@@ -1071,12 +1071,20 @@ In the [Lab Notebook](README.md) and [images](images) directory:
 `[<lernact-rc>]`The ALU is composed out of ALU bit slices. There is a bit slice for each one of the number of bits the processor word. In this step, we will build a 4-bit ALU.  
 
 ##### Stacking bit slices
-- composition TBD  
-- multiplexor  
+
+The first step in creating a multi-bit ALU out of bit slices, is to stack the requisite number of bit slices, as shown in the following image for a 4-bit ALU:
+
+<img src="images/4-bit-alu.png" width="800" />
 
 ##### 2s complement
 
+The ALU we are building includes support for 2s-complement signed integer addition. You may ask how we can convert a number to its 2s-complement if we have a subtaction operation? The conversion added two more operations, namely flipping the bits and adding 1. This had to be done before we could perform the addition and get a silent overflow. The answer is that the signed integers are converted long before they make it to the ALU, so it can just perform the addition, as it works the same for any combination of operand signs. Signed integers are stored in memory in 2s-complement format. There is no conversion happening inside the ALU, which has to be as fast as possible. 
+
 ##### Overflow
+
+One thing that we need to take care of to have a 4-bit ALU is to construct an overflow circuit (aka `[<cept>]`_overflow guard_). There are two types of overflow that happen during addition:
+1. Silend overflow, which we saw when we had operands with opposite signs (remember 13<sub>10</sub> - 7<sub>10</sub>).  
+2. Regular overflow, namely arriving at a result with larger magnitude than can be represented, may happen when the operands are with the _same sign_, either both positive or both negative. Regular overflow never happens when the signs of the operands are different. Regular overflow can be detected when _the sign of the result is opposite of that of the operands_. Here is a succinct [overview of binary arithmetic](https://www.doc.ic.ac.uk/~eedwards/compsys/arithmetic/index.html).  
 
 #### 2. Apply
 [[toc](#table-of-contents)]  
