@@ -49,6 +49,7 @@ Table of Contents
         * [Logical functions](#logical-functions)
         * [Boolean algebra](#boolean-algebra)
         * [Gates out of transistors](#gates-out-of-transistors)
+        * [Functional test setup](#functional-test-setup)
       * [2\. Apply](#2-apply-6)
       * [3\. Present](#3-present-6)
     * [Step 8: Half adder and full adder](#step-8-half-adder-and-full-adder)
@@ -64,7 +65,6 @@ Table of Contents
       * [1\. Study](#1-study-8)
         * [Booleans revisited](#booleans-revisited)
         * [Order of operatins](#order-of-operatins)
-        * [Functional test setup](#functional-test-setup)
         * [Functionally complete sets](#functionally-complete-sets)
       * [2\. Apply](#2-apply-8)
       * [3\. Present](#3-present-8)
@@ -367,7 +367,7 @@ In the [programs](programs) directory:
 
 1. Add your program from 4.2.1 with filename `microbit-program-4-2-1.js`.  
 
-In the [Lab Notebook](README.md) and the [images](images) directory:
+In the [Lab Notebook](README.md):
 
 1. Link to the program from 4.2.1.  
 2. Link to a demo video of the operation of the program from 4.2.1.  
@@ -403,7 +403,7 @@ In the [programs](programs) directory:
 
 1. Add your program from 5.2.1 with filename `microbit-program-5-2-1.js`.  
 
-In the [Lab Notebook](README.md) and the [images](images) directory:
+In the [Lab Notebook](README.md):
 
 1. Link to the program from 5.2.1.  
 2. Link to a demo video of the operation of the program from 5.2.1.  
@@ -486,7 +486,7 @@ In the [programs](programs) directory:
 2. Add your program from 6.2.2 with filename `microbit-program-6-2-2.js`.  
 3. Add your program from 6.2.3 with filename `microbit-program-6-2-3.js`.  
 
-In the [Lab Notebook](README.md) and the [images](images) directory:
+In the [Lab Notebook](README.md):
 
 1. Link to the program from 6.2.1.  
 2. Link to a demo video of the operation of the program from 6.2.1.  
@@ -502,7 +502,8 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 #### 1. Study
 [[toc](#table-of-contents)]
 
-`[<lernact-rd>]`Perhaps the most widely impactful application of transistors is in `[<cept>]`_logic gates_, tiny hardware devices which perform logical functions.  
+`[<lernact-rd>]`Perhaps the most impactful application of transistors is in `[<cept>]`_logic gates_, tiny hardware devices which perform logical functions.  
+
 ##### Logical functions
 [[toc](#table-of-contents)]  
 
@@ -514,16 +515,83 @@ In the [Lab Notebook](README.md) and the [images](images) directory:
 
 - [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
 - videos of gates from (FET) transistors  
+  - [all gates](https://www.instructables.com/Logic-Gates-with-NPN-transistors/)  
+  - [6-transistor XOR](http://sullystationtechnologies.com/npnxorgate.html)  
+  - [2-transistor XOR](https://hackaday.io/project/8449-hackaday-ttlers/log/150147-bipolar-xor-gate-with-only-2-transistors)  
+
+
+##### Functional test setup
+[[toc](#table-of-contents)]  
+
+```javascript
+// Example 7.1.1
+
+function logic(a : DigitalPin, b : DigitalPin) : void {
+    let aa : number[] = [0, 1, 0, 1]
+    let bb : number[] = [0, 0, 1, 1]
+
+    let brightness : number[] = [5, 255]
+
+    for (let i=0; i<aa.length; i++) {
+        led.plotBrightness(0, i, bb[i] ? brightness[1] : brightness[0])
+        pins.digitalWritePin(b, bb[i])
+
+        led.plotBrightness(1, i, aa[i] ? brightness[1] : brightness[0])
+        pins.digitalWritePin(a, aa[i])
+
+        pause(1000)
+    }
+    pause(2000)
+    basic.clearScreen()
+    pins.digitalWritePin(a, 0)
+    pins.digitalWritePin(b, 0)
+    pause(1000)
+}
+
+let a : DigitalPin = DigitalPin.P11
+let b : DigitalPin = DigitalPin.P2
+
+basic.forever(function () {
+    logic(a, b)
+})
+```
+Notice the following:
+1. The program drives 2 operands, `aa` and `bb`. 
+2. The operand arrays together form the 4 input combinations for a 2-input logic gate.  
+
+The logic function is external to the micro:bit, built out of NPN transistors and a load circuit.  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
 
-**TODO: On paper, build and measure.**
-**TODO: On breadboard, XOR with NPN and resistors.**
-**TODO: On CiruictJS, a 6-NPN-transistor design of an XOR.**
+1. `[<lernact-prac>]`Build an AND logic gate out of NPN transistors and a load circuit, and driven by the micro:bit running the `logic` program. Sketch the design and highlight the current path or lack thereof for:
+   1. A logic output of 1 (that is, the LED is lit up). One input combination is sufficient.    
+   2. A logic output of 0 (that is, the LED is dark). One input combination is sufficient.   
+
+2. `[<lernact-prac>]`Build an OR logic gate out of NPN transistors and a load circuit, and driven by the micro:bit running the `logic` program. Sketch the design and highlight the current path or lack thereof for:
+   1. A logic output of 1 (that is, the LED is lit up). One input combination is sufficient.    
+   2. A logic output of 0 (that is, the LED is dark). One input combination is sufficient.   
+
+3. `[<lernact-prac>]`Build an NOT logic gate out of NPN transistors and a load circuit, and driven by the micro:bit running the `logic` program. _You can either modify the program for one operand or use just one of the output pins._ Sketch the design and highlight the current path or lack thereof for:
+   1. A logic output of 1 (that is, the LED is lit up). One input combination is sufficient.    
+   2. A logic output of 0 (that is, the LED is dark). One input combination is sufficient.   
+
+4. `[<lernact-prac>]`**[Optional challenge, max 15 extra step points]** Build an XOR logic gate out of 2 NPN transistors as shown in the second figure in this [blog post](https://hackaday.io/project/8449-hackaday-ttlers/log/150147-bipolar-xor-gate-with-only-2-transistors), driven by the micro:bit running the `logic` program. Instead of the usual LED load circuit, read the signal at point C with an analog pin, extending the program to match this input with the 4 output combinations for points A and B. Show the output in column 4. What are the analog level ranges for the logic 0 and 1 readings? Sketch the design and highlight the current path or lack thereof for:
+   1. A logic output of 1 (that is, the LED is lit up) for both the combinations with this result.    
+   2. A logic output of 0 (that is, the LED is dark) for both the combinations with this result.    
+
+5. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Using [CircuitJS simulator](http://lushprojects.com/circuitjs/circuitjs.html), design and simulate the 6-NPN XOR logic gate.  
 
 #### 3. Present
 [[toc](#table-of-contents)]
+
+In the [Lab Notebook](README.md):
+
+1. Show your work for 7.2.1.  
+2. Show your work for 7.2.2.  
+3. Show your work for 7.2.3.  
+4. Show all your work for 7.2.4 and answer the question.    
+5. Record a video of the circuit from 7.2.5 operating in the simulator with the output reading point shown in a scope while cycling through the 4 input combinations using the two switches.  
 
 
 ### Step 8: Half adder and full adder
@@ -574,11 +642,6 @@ Show the process for the half-adder, all steps and whatever theory is necessary.
 [[toc](#table-of-contents)]  
 
 - simulating connections    
-
-##### Functional test setup
-[[toc](#table-of-contents)]  
-
-- `logic` function  
 
 ##### Functionally complete sets
 [[toc](#table-of-contents)]  
