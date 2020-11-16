@@ -525,7 +525,7 @@ Logical functions are functions of 1 or 2 1-bit operands, that can take two valu
    1 | 0 | 1
    1 | 1 | 1
    
-3. Logical function XOR (meaning `[<cept>]`_exclusive OR_) (2 inputs, 1 output):
+3. Logical function [XOR](https://en.wikipedia.org/wiki/XOR_gate) (meaning `[<cept>]`_exclusive OR_) (2 inputs, 1 output):
    A | B | A XOR B
    --- | --- | ---
    0 | 0 | 0
@@ -768,7 +768,7 @@ In the [Lab Notebook](README.md):
 ##### Booleans revisited
 [[toc](#table-of-contents)]  
 
-Let's recall what the `boolean` data type was: it contains a set of two different values `true` (aka logical 1) and `false` (aka logical 0). Because of the duality of the sets {`true`, `false`} and {1, 0}, we see that functions taking `boolean` arguments and returning a single `boolean` value are in essence `[<cept>]`_bitwise_ functions, and therefore ideal to simulate logic gates with.
+Let's recall what the `boolean` data type was: it contains a set of two different values `true` (aka logical 1) and `false` (aka logical 0). Because of the duality of the sets {`true`, `false`} and {1, 0}, we see that functions taking `boolean` arguments and returning a single `boolean` value are ideal to simulate logic gates with.
 
 Let's see an example of the AND, OR, and NOT gates:
 ```javascript
@@ -786,7 +786,7 @@ function NOT(a : boolean) : boolean {
     return ! a
 }
 ```
-Notice that JavaScript already has `[<cept>]`_bitwise operators_ for these operations, namely `&&` for AND, `||` for OR, and `!` for NOT. Recall that we encountered `!` very early on when flipping icons!
+Notice that JavaScript already has `[<cept>]`_logical operators_ for these operations, namely `&&` for AND, `||` for OR, and `!` for NOT. Recall that we encountered `!` very early on when flipping icons!
 
 Once we have these logic-gate functions, we can simulate any hardware device built out of logic gates. Let's practice on the XOR gate first. Recall that XOR returns 1 when exactly one of its inputs is 1. Let's review the truth table:
 A | B | A XOR B
@@ -796,7 +796,7 @@ A | B | A XOR B
 1 | 0 | 1
 1 | 1 | 0
 
-A XOR B is 1 when either A is 1 or B is 1, **but not both** (in which it differs from regular OR). This can be expressed as A(NOT B) OR (NOT A)B. Now we can write this as a function, using our gate functions or directly with bitwise operators:
+A XOR B is 1 when either A is 1 or B is 1, **but not both** (in which it differs from regular OR). This can be expressed as A(NOT B) OR (NOT A)B. Now we can write this as a function, using our gate functions or directly with logical operators:
 ```javascript
 // Example 9.2.2
 
@@ -808,17 +808,33 @@ function XOR(a : boolean, b : boolean) : boolean {
 ##### Order of operatins
 [[toc](#table-of-contents)]  
 
-Notice the order of operations we used in the functional implementation of XOR above....
+Notice the order of operations we used in the functional implementation of XOR above. While the logical operators obey JavaScript's `[<cept>]`[_operator precedence_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence), in particular `!` is applied before `&&` which is itself applied before `||`, there are not equivalent rules for our user-defined logic-gate simulation functions. Likewise, if we were to write the body of the XOR function with logical operators, we don't even need the brackets (which have the highest operator precedence) for correct evaluation, only for readability:
+```javascript
+// Example 9.2.3
 
-- simulating connections    
+function XOR(a : boolean, b : boolean) : boolean {
+    return a && !b || !a && b
+}
+```
+To achieve the same evaluation, we need to call our functions in the order the operators are applied. The first to be applied (which are the `NOT()` calls) are the most deeply nested, while the last to be evaluated (the `OR()` call) is on the outside, to get us the expression `OR(AND(a, NOT(b)), AND(NOT(a), b))`.  
+
+##### Simulating connections    
+
+In hardware, logic gates are connected to each other through wires. In our simulation, the connections are implicit in the nested calls of our simulation functions. The expression above can be shown as the follwing `[<cept>]`_signal-flow_ diagram:
+
+<img src="images/xor-out-of-gates.jpg" width="800" />
 
 ##### Functionally complete sets
 [[toc](#table-of-contents)]  
 
-[functional completeness](https://en.wikipedia.org/wiki/Functional_completeness):
-- any two of {AND, OR, NOT}  
-- NOR  
-- NAND  
+We just saw that one gate (XOR) can be designed out of other gates. How far can this go? It turns out that this can go quite far: there are several different sets of gates that can be used to design all remaining gates. These are called `[<cept>]`[_functionally complete sets_](https://en.wikipedia.org/wiki/Functional_completeness):
+1. Any two gates of {AND, OR, NOT}.  
+2. The NOR gate by itself, which is equivalent to an OR, followed by a NOT.    
+3. The NAND gate by itself, which is equivalent to an AND, followed by a NOT.  
+
+In fact, in hardware, all gates and other computing devices are built out of NAND or NOR gates.
+
+**Question 9.1.1:** Why do you think this might be?  
 
 #### 2. Apply
 [[toc](#table-of-contents)]  
