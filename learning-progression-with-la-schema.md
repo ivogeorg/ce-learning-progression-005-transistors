@@ -75,8 +75,8 @@ Table of Contents
       * [3\. Present](#3-present-9)
     * [Step 11: ALU bit slice](#step-11-alu-bit-slice)
       * [1\. Study](#1-study-10)
-        * [Function selection](#function-selection)
         * [I/O](#io)
+        * [Function selection](#function-selection)
         * [Control lines](#control-lines)
       * [2\. Apply](#2-apply-10)
       * [3\. Present](#3-present-10)
@@ -875,22 +875,23 @@ In the [programs](programs) directory:
 
 In the [Lab Notebook](README.md):
 
-1. Link to the program from 9.2.1.  
-2. Link to demo video showing the operation of the program from 9.2.1.  
-3. Link to the program from 9.2.2.  
-4. Link to demo video showing the operation of the program from 9.2.2.  
-5. Link to the program from 9.2.3.  
-6. Link to demo video showing the operation of the program from 9.2.3.  
-7. Link to the program from 9.2.4.  
-8. Link to demo video showing the operation of the program from 9.2.4.  
-9. Link to the program from 9.2.5.  
-10. Link to demo video showing the operation of the program from 9.2.5.  
-11. Link to the program from 9.2.6.  
-12. Link to demo video showing the operation of the program from 9.2.6.  
-13. Link to the program from 9.2.7.  
-14. Link to demo video showing the operation of the program from 9.2.7.  
-15. Link to the program from 9.2.8.  
-16. Link to demo video showing the operation of the program from 9.2.8.  
+1. Answer question 9.1.1.  
+2. Link to the program from 9.2.1.  
+3. Link to demo video showing the operation of the program from 9.2.1.  
+4. Link to the program from 9.2.2.  
+5. Link to demo video showing the operation of the program from 9.2.2.  
+6. Link to the program from 9.2.3.  
+7. Link to demo video showing the operation of the program from 9.2.3.  
+8. Link to the program from 9.2.4.  
+9. Link to demo video showing the operation of the program from 9.2.4.  
+10. Link to the program from 9.2.5.  
+11. Link to demo video showing the operation of the program from 9.2.5.  
+12. Link to the program from 9.2.6.  
+13. Link to demo video showing the operation of the program from 9.2.6.  
+14. Link to the program from 9.2.7.  
+15. Link to demo video showing the operation of the program from 9.2.7.  
+16. Link to the program from 9.2.8.  
+17. Link to demo video showing the operation of the program from 9.2.8.  
 
 
 ### Step 10: Full adder emulation
@@ -993,44 +994,72 @@ In the [Lab Notebook](README.md):
 
 <img src="images/alu-bit-slice.png" width="800" />
 
-##### Function selection
-[[toc](#table-of-contents)]  
-
-- all functions of an ALU  
-- multiplexor/selector/decoder  
-- carry  
-- shift  
+Note that when two lines cross _without a dot_, there is **no** electrical connection.  
 
 ##### I/O
 [[toc](#table-of-contents)]  
 
+The ALU bit slice has the following inputs:
+1. A and B operands.  
+2. Carry In from the slice at the previous position.  
+3. Function selection lines (aka `[<cept>]`_bus_).  
+4. Operand control lines.  
+5. Right shift in from the slice at the next position, if any.  
+
+The ALU bit slice has the following outputs:
+1. The output result.  
+2. Carry out to the slice at the next position.  
+3. Right shift out to the slice at the previous position.  
+
+##### Function selection
+[[toc](#table-of-contents)]  
+
+The ALU bit slice can execute 8 different functions, selected by the 3 control lines F<sub>2</sub>, F<sub>1</sub>, F<sub>0</sub>.
+
+**Question 11.1.1:** Why can 3 lines select 1 of 8 functions?  
+**Question 11.1.2:** Notice the **Carry Out** output at the bottom and the 5-input AND gate nearby. What is the value of the function lines that selects addition?    
+**Question 11.1.3:** A shift function can only be applied to one operand at a time. Take a look at the **Right Shift Out** output at the top. Which of the two operands A and B can be right-shifted?  
+
 ##### Control lines
 [[toc](#table-of-contents)]  
+
+The control lines of the ALU slice are:
+1. ENA enables the A input.  
+2. ENB enables the B input.  
+3. INVA inverts the A input.  
+
+**Question 11.1.4:** Why are the enable lines connected to AND gates with their controlled inputs?  
+**Question 11.1.5:** Why is the invert line connected to an XOR gate with its controlled input?  
 
 #### 2. Apply
 [[toc](#table-of-contents)]  
 
-1. `[<lernact-prac>]`Trace and highlight the active lines for the NOT function in the bit-slice diagram.  
+1. `[<lernact-prac>]`Trace and highlight the active (meaning carrying signals of interest) lines for the NOT function in the bit-slice diagram.  
 
 2. `[<lernact-prac>]`Put 4 bit slices next to each other and connect them to form a 4-bit ALU. Answer the following questions:
    1. How many control lines do you have in total, and what are they? (Make sure they are properly connected in your diagram.)  
    2. How many data lines do you have in total, and what are they? (Make sure they are properly connected in your diagram.)  
 
-3. `[<lernact-prac>]`**[Optional challenge, max 7 extra step points]** ALUs usually include comparison functions as well. They might or might not be performed inside the slices. Read this [post](https://www.electronics-tutorials.ws/combination/comb_8.html) on building a digital comparator. Modify the ALU bit-slice design from the diagram by removing the XOR function and substituting a LESS function instead.  
+3. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** ALUs usually include comparison functions as well. They might or might not be performed inside the slices. Read this [post](https://www.electronics-tutorials.ws/combination/comb_8.html) on building a digital comparator. Modify the ALU bit-slice design from the diagram by removing the XOR function and substituting a LESS function instead.  
 
-4. `[<lernact-prac>]`**[Optional challenge, max 3 extra step points]** The same as 11.2.3 without adding any gates, so that, with the removal of the XOR gate, the new bit slice has _one gate less_.  
+4. `[<lernact-prac>]`**[Optional challenge, max 5 extra step points]** The same as 11.2.3 without adding any gates, so that, with the removal of the XOR gate, the new bit slice has _one gate less_.  
 
 #### 3. Present
 [[toc](#table-of-contents)]  
 
 In the [Lab Notebook](README.md) and [images](images) directory:
 
-1. Show your work for 11.2.1 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
-2. Answer question 11.2.2.1.  
-3. Answer question 11.2.2.2.  
-1. Show your work for 11.2.2 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
-1. Show your work for 11.2.3 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
-1. Show your work for 11.2.4 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+1. Answer question 11.1.1.  
+2. Answer question 11.1.2.  
+3. Answer question 11.1.3.  
+4. Answer question 11.1.4.  
+5. Answer question 11.1.5.  
+6. Show your work for 11.2.1 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+7. Answer question 11.2.2.1.  
+8. Answer question 11.2.2.2.  
+9. Show your work for 11.2.2 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+10. Show your work for 11.2.3 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+11. Show your work for 11.2.4 in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
 
 
 ### Step 12: Emulated 4-bit ALU
