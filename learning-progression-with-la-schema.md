@@ -507,7 +507,7 @@ In the [Lab Notebook](README.md):
 ##### Logical functions
 [[toc](#table-of-contents)]  
 
-Logical functions are functions of 1 or 2 1-bit operands, that can take two values, logical 0 (aka `false`) and logical 1 (aka `true`). They are defined in tables for all 4 combinations of the inputs (namely `00`, `01`, `10`, and `11`). The tables are called `[<cept>]`_truth tables_, because they show for which combinations of the inputs the function outputs a 1-bit `true`. Here are the truth tables for the 3 most well known logical functions:
+Logical functions are functions of 1 or 2 1-bit operands, that can take two values, logical 0 (aka `false`) and logical 1 (aka `true`). They are defined in tables for all 4 combinations of the inputs (namely `00`, `01`, `10`, and `11`). The tables are called `[<cept>]`_truth tables_, because they show for which combinations of the inputs the function outputs a 1-bit `true`. Here are the truth tables for the most well known logical functions:
 
 1. Logical function AND (2 inputs, 1 output):
    A | B | A AND B
@@ -525,7 +525,15 @@ Logical functions are functions of 1 or 2 1-bit operands, that can take two valu
    1 | 0 | 1
    1 | 1 | 1
    
-1. Logical function NOT (1 input, 1 output):
+3. Logical function XOR (meaning `[<cept>]`_exclusive OR_) (2 inputs, 1 output):
+   A | B | A XOR B
+   --- | --- | ---
+   0 | 0 | 0
+   0 | 1 | 1
+   1 | 0 | 1
+   1 | 1 | 0
+   
+4. Logical function NOT (1 input, 1 output):
    A | NOT A
    --- | ---
    0 | 1 | 0
@@ -592,6 +600,8 @@ Notice the following:
 1. The program drives 2 operands, `aa` and `bb`. 
 2. The operand arrays together form the 4 input combinations for a 2-input logic gate, shown in the first two columns of the micro:bit LED matrix.    
 3. The logic function itself is external to the micro:bit, and is built out of NPN transistors and a load circuit.  
+
+Here is a [demo video for logical AND](https://msudenver.yuja.com/V/Video?v=2191928&node=8090055&a=573716934&autoplay=1).  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
