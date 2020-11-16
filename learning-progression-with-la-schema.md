@@ -180,8 +180,16 @@ Sparkfun has an excellent, accessible thought thorough, [introduction to transis
 [[toc](#table-of-contents)]
 
 1. `[<lernact-texp>]`If you connect two bipolar junction diodes in series, either in PN-NP or NP-PN configuration, and connect a wire between them to act as the base, can you make a PNP or NPN transistor? Why or why not?  
+
 2. `[<lernact-disc>]`BJT transistors use their base current to control the main circuit current, whereas FET transistors only use voltage and have no base current. Which of the two types would you think more likely to be the choice for the production of integrated circuits (like processors and memory sticks), where transistors are packed very densely and close to each other?  
-3. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** **TODO** SRAM cell and SRAM operation...  
+
+3. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** This progression will focus on processing but we know that memory is no less important. In this discovery exercise, read and article and watch a video on the structure and operation of a 1-bit `[<cept>]`_SRAM cell_, which is usually built out of 6 `[<cept>]`[_MOSFETs_](https://en.wikipedia.org/wiki/MOSFET). SRAM is the current technology for computer main memory (aka RAM). Here are some guiding questions:
+   1. What is `[<cept>]`_bistability_ and why is it important for memory?  
+   2. What is memory anyway?  
+   3. What are the bit lines?  
+   4. What is the word line?  
+   5. Why are MOSFETs used rather than, say, BJTs?
+
 4. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** Processors and memory are the fundamental devices of computing. There is a constant urge to pack more and more transistors closer and closer together to get larger capacities in smaller packages. How are transistor density and the `[<cept>]`_dark silicon_ problem related?  
 
 #### 3. Present
@@ -191,7 +199,7 @@ In the [Lab Notebook](README.md):
 
 1. Answer the questions in 1.2.1. Show your work in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
 2. Answer the question in 1.2.2. Show your work in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
-1. Answer the questions in 1.2.3. Show your work in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
+1. Explain the structure and operation of SRAM cells and answer the questions in 1.2.3. Show your work in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
 1. Answer the questions in 1.2.4. Show your work in well-formatted Markdown, including whatever images, tables, or other graphical elements you find necessary.  
 
 
@@ -534,7 +542,7 @@ Logical functions are functions of 1 or 2 1-bit operands, that can take two valu
    1 | 0 | 1
    1 | 1 | 0
    
-4. Logical function NOT (1 input, 1 output):
+4. Logical function NOT (aka `[<cept>]`_inverter_) (1 input, 1 output):
    A | NOT A
    --- | ---
    0 | 1 | 0
@@ -961,8 +969,6 @@ Note the following:
 
 #### 2. Apply
 [[toc](#table-of-contents)]  
-
-**TODO: Full-adder emulation program**
 
 1. `[<lernact-prac>]`Implement a static table-based (that is, without computation) full adder.  
 
