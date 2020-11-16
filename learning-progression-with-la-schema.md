@@ -554,11 +554,11 @@ The `[<cept>]`_algebra_ for 2 values, 0 and 1, is called `[<cept>]`[_Boolean Alg
 Logic gates are implementations of the Boolean in `[<cept>]`_hardware_. They are made of tiny combinations of transistors and are extremely fast and can be packed extremely densely on semiconductor chips.  
 
 There are excellent treatments of this topic in online videos and guides, some of which we list here:
-1. `[<lernact-see>]`(Video) [Logic gates from transistors](https://www.youtube.com/watch?v=sTu3LwpF6XI&t=435s) by Ben Eater.  
-2. `[<lernact-see>]`(Video) [Logic gates from transistors](https://www.youtube.com/watch?v=SW2Bwc17_wA&t=362s) by Eugene Khutoryansky.  
-3. `[<lernact-see>]`(Video) [Building logic gates from MOSFET transistors](https://www.youtube.com/watch?v=1rZyGL1K5QI) by EngMicroLectures.  
-4. `[<lernact-rd>]`(Ghide) [Tutorial for all principal gates](https://www.instructables.com/Logic-Gates-with-NPN-transistors/) by Instructables.  
-5. `[<lernact-rd>]`(Ghide) [6-transistor XOR gate](http://sullystationtechnologies.com/npnxorgate.html) by Sully Technologies.  
+1. `[<lernact-see>]`Video on [Logic gates from transistors](https://www.youtube.com/watch?v=sTu3LwpF6XI&t=435s) by Ben Eater.  
+2. `[<lernact-see>]`Video on [Logic gates from transistors](https://www.youtube.com/watch?v=SW2Bwc17_wA&t=362s) by Eugene Khutoryansky.  
+3. `[<lernact-see>]`Video on [Building logic gates from MOSFET transistors](https://www.youtube.com/watch?v=1rZyGL1K5QI) by EngMicroLectures.  
+4. `[<lernact-rd>]`Tutorial on [Building all principal gates out of NPN transistors](https://www.instructables.com/Logic-Gates-with-NPN-transistors/) by Instructables.  
+5. `[<lernact-rd>]`Tutorial on [Building an XOR gate out of 6 NPN transistors](http://sullystationtechnologies.com/npnxorgate.html) by Sully Technologies.  
 
 ##### Functional test setup
 [[toc](#table-of-contents)]  
@@ -641,21 +641,59 @@ In the [Lab Notebook](README.md):
 #### 1. Study
 [[toc](#table-of-contents)]
 
-Show the process for the half-adder, all steps and whatever theory is necessary.  
+`[<lernact-rd>]`Logic gates are all we need to build an `[<cept>]`_adder_, a hardware device which can perform addition. We will do this in two steps.  
 
 ##### Half adder
 [[toc](#table-of-contents)]  
 
+The `[<cept>]`_half adder_ adds two 1-bit numbers but ignores the possible `[<cept>]`_carry in_ from a previous position. The `[<cept>]`_full adder_ adds it in.  
+
 ##### Truth table
 [[toc](#table-of-contents)]  
+
+The truth table of the half adder, where C<sub>OUT</sub> stands for `[<cept>]`_carry out_ and S stands for sum, is as follows:
+A | B | C<sub>OUT</sub> | S
+--- | --- | --- | ---
+0 | 0 | 0 | 0
+0 | 1 | 0 | 1
+1 | 0 | 0 | 1
+1 | 1 | 1 | 0
+
+Notice the following:
+1. This is just plain binary addition of two 1-bit numbers A and B and a 2-bit result C<sub>OUT</sub>S.    
+2. C<sub>OUT</sub> = A AND B.  
+3. S = A XOR B.  
+
+We already know what gates we need to build a half adder!  
+
+##### Full adder
+[[toc](#table-of-contents)]   
+
+The truth table of the full adder has the two inputs A and B and also adds C<sub>in</sub>, the possible carry from the previous position:
+A | B | C<sub>IN</sub> | C<sub>OUT</sub> | S
+--- | --- | --- | --- | ---
+0 | 0 | 0 | 0 | 0 
+0 | 0 | 1 | 0 | 1 
+0 | 1 | 0 | 0 | 1 
+0 | 1 | 1 | 1 | 0 
+1 | 0 | 0 | 0 | 1 
+1 | 0 | 1 | 1 | 0 
+1 | 1 | 0 | 1 | 0 
+1 | 1 | 1 | 1 | 1
+
+Notice the following:
+1. Again, this is plain addition, this time of 3 1-bit numbers and a 2-bit result.  
+2. When we have all 3 inputs equal 1, our result is 3<sub>10</sub>, or 11<sub>2</sub>.  
+3. This time, it is not so obvious what C<sub>OUT</sub> and S are equal to in terms of A, B, and C<sub>IN</sub>.  
 
 ##### Sum of minterms
 [[toc](#table-of-contents)]  
 
-##### Minimal number of gates
-[[toc](#table-of-contents)]  
+The truth table for the full adder can actually be expressed as 2 equations, one for each of the output bits. Here is the first one, where an input with a bar on top means the input is negated (e.g. <img src="https://render.githubusercontent.com/render/math?math=\bar{A} = NOT A">):
 
-##### Full adder
+
+
+##### Minimal number of gates
 [[toc](#table-of-contents)]  
 
 #### 2. Apply
