@@ -763,14 +763,52 @@ In the [Lab Notebook](README.md):
 #### 1. Study
 [[toc](#table-of-contents)]  
 
+`[<lernact-rd>]`Logic gates come in chips we can use on the breadboard instead of building them out of transistors ourselves, but they would have made the lab kit expensive. Instead, we are going to simulate them on the micro:bit.
+
 ##### Booleans revisited
 [[toc](#table-of-contents)]  
 
-- booleans for bits!
-- Boolean algebra!  
+Let's recall what the `boolean` data type was: it contains a set of two different values `true` (aka logical 1) and `false` (aka logical 0). Because of the duality of the sets {`true`, `false`} and {1, 0}, we see that functions taking `boolean` arguments and returning a single `boolean` value are in essence `[<cept>]`_bitwise_ functions, and therefore ideal to simulate logic gates with.
+
+Let's see an example of the AND, OR, and NOT gates:
+```javascript
+// Example 9.2.1
+
+function AND(a : boolean, b : boolean) : boolean {
+    return a && b
+}
+
+function OR(a : boolean, b : boolean) : boolean {
+    return a || b
+}
+
+function NOT(a : boolean) : boolean {
+    return ! a
+}
+```
+Notice that JavaScript already has `[<cept>]`_bitwise operators_ for these operations, namely `&&` for AND, `||` for OR, and `!` for NOT. Recall that we encountered `!` very early on when flipping icons!
+
+Once we have these logic-gate functions, we can simulate any hardware device built out of logic gates. Let's practice on the XOR gate first. Recall that XOR returns 1 when exactly one of its inputs is 1. Let's review the truth table:
+A | B | A XOR B
+--- | --- | ---
+0 | 0 | 0
+0 | 1 | 1
+1 | 0 | 1
+1 | 1 | 0
+
+A XOR B is 1 when either A is 1 or B is 1, **but not both** (in which it differs from regular OR). This can be expressed as A(NOT B) OR (NOT A)B. Now we can write this as a function, using our gate functions or directly with bitwise operators:
+```javascript
+// Example 9.2.2
+
+function XOR(a : boolean, b : boolean) : boolean {
+    return OR(AND(a, NOT(b)), AND(NOT(a), b))               // or, with operators, (a && !b) || (!a && b)
+}
+```
 
 ##### Order of operatins
 [[toc](#table-of-contents)]  
+
+Notice the order of operations we used in the functional implementation of XOR above....
 
 - simulating connections    
 
