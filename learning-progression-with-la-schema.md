@@ -989,7 +989,9 @@ In the [Lab Notebook](README.md):
 #### 1. Study
 [[toc](#table-of-contents)]  
 
-<img src="images/alu-bit-slice.png" width="300" />
+`[<lernact-rd>]`At the heart of every modern processor there is a device that performs all the arithmetic and logic functions and is, naturally, called the `[<cept>]`_arithmetic-logic unit (ALU)_. The ALU is also built out of gates. More specifically, each bit position has its own independent circuit, called a `[<cept>]`_bit slice_. In this section we will study the following bit slice:
+
+<img src="images/alu-bit-slice.png" width="800" />
 
 ##### Function selection
 [[toc](#table-of-contents)]  
@@ -1036,6 +1038,8 @@ In the [Lab Notebook](README.md) and [images](images) directory:
 
 #### 1. Study
 [[toc](#table-of-contents)]  
+
+`[<lernact-rc>]`The ALU is composed out of ALU bit slices. There is a bit slice for each one of the number of bits the processor word. In this step, we will build a 4-bit ALU.  
 
 ##### Multiplexor
 - composition TBD  
