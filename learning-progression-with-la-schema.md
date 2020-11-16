@@ -502,27 +502,60 @@ In the [Lab Notebook](README.md):
 #### 1. Study
 [[toc](#table-of-contents)]
 
-`[<lernact-rd>]`Perhaps the most impactful application of transistors is in `[<cept>]`_logic gates_, tiny hardware devices which perform logical functions.  
+`[<lernact-rd>]`Perhaps the most impactful application of transistors is in `[<cept>]`_logic gates_, tiny hardware devices which perform `[<cept>]`_logical functions_.  
 
 ##### Logical functions
 [[toc](#table-of-contents)]  
 
+Logical functions are functions of 1 or 2 1-bit operands, that can take two values, logical 0 (aka `false`) and logical 1 (aka `true`). They are defined in tables for all 4 combinations of the inputs (namely `00`, `01`, `10`, and `11`). The tables are called `[<cept>]`_truth tables_, because they show for which combinations of the inputs the function outputs a 1-bit `true`. Here are the truth tables for the 3 most well known logical functions:
+
+1. Logical function AND (2 inputs, 1 output):
+   A | B | A AND B
+   --- | --- | ---
+   0 | 0 | 0
+   0 | 1 | 0
+   1 | 0 | 0
+   1 | 1 | 1
+   
+2. Logical function OR (2 inputs, 1 output):
+   A | B | A OR B
+   --- | --- | ---
+   0 | 0 | 0
+   0 | 1 | 1
+   1 | 0 | 1
+   1 | 1 | 1
+   
+1. Logical function NOT (1 input, 1 output):
+   A | NOT A
+   --- | ---
+   0 | 1 | 0
+   1 | 0 | 0   
+
+In this progression we show how all computation is built on top of these simple functions.
+
 ##### Boolean algebra
 [[toc](#table-of-contents)]  
+
+The `[<cept>]`_algebra_ for 2 values, 0 and 1, is called `[<cept>]`[_Boolean Algebra_](https://www.electronics-tutorials.ws/category/boolean). The full coverage of the subject is beyond the scope of this progression, but [this chapter of the material linked above](https://www.electronics-tutorials.ws/boolean/bool_6.html) has a succinct overview of the laws and functions of Boolean algebra, including AND, OR, and NOT.  
+
+`[<lernact-rd>]`The MakeCode [Logic Lab](https://makecode.microbit.org/courses/logic-lab) is a brief and accessible introduction to Boolean logic.  
 
 ##### Gates out of transistors
 [[toc](#table-of-contents)]  
 
-- [Logic Lab](https://makecode.microbit.org/courses/logic-lab)  
-- videos of gates from (FET) transistors  
-  - [all gates](https://www.instructables.com/Logic-Gates-with-NPN-transistors/)  
-  - [6-transistor XOR](http://sullystationtechnologies.com/npnxorgate.html)  
-  - [2-transistor XOR](https://hackaday.io/project/8449-hackaday-ttlers/log/150147-bipolar-xor-gate-with-only-2-transistors)  
+Logic gates are implementations of the Boolean in `[<cept>]`_hardware_. They are made of tiny combinations of transistors and are extremely fast and can be packed extremely densely on semiconductor chips.  
 
+There are excellent treatments of this topic in online videos and guides, some of which we list here:
+1. `[<lernact-see>]`(Video) [Logic gates from transistors](https://www.youtube.com/watch?v=sTu3LwpF6XI&t=435s) by Ben Eater.  
+2. `[<lernact-see>]`(Video) [Logic gates from transistors](https://www.youtube.com/watch?v=SW2Bwc17_wA&t=362s) by Eugene Khutoryansky.  
+3. `[<lernact-see>]`(Video) [Building logic gates from MOSFET transistors](https://www.youtube.com/watch?v=1rZyGL1K5QI) by EngMicroLectures.  
+4. `[<lernact-rd>]`(Ghide) [Tutorial for all principal gates](https://www.instructables.com/Logic-Gates-with-NPN-transistors/) by Instructables.  
+5. `[<lernact-rd>]`(Ghide) [6-transistor XOR gate](http://sullystationtechnologies.com/npnxorgate.html) by Sully Technologies.  
 
 ##### Functional test setup
 [[toc](#table-of-contents)]  
 
+The following program can be run on the micro:bit to run the external circuits for the logic gates:
 ```javascript
 // Example 7.1.1
 
@@ -557,9 +590,8 @@ basic.forever(function () {
 ```
 Notice the following:
 1. The program drives 2 operands, `aa` and `bb`. 
-2. The operand arrays together form the 4 input combinations for a 2-input logic gate.  
-
-The logic function is external to the micro:bit, built out of NPN transistors and a load circuit.  
+2. The operand arrays together form the 4 input combinations for a 2-input logic gate, shown in the first two columns of the micro:bit LED matrix.    
+3. The logic function itself is external to the micro:bit, and is built out of NPN transistors and a load circuit.  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
