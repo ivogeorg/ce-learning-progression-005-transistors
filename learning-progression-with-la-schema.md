@@ -691,10 +691,35 @@ Notice the following:
 
 The truth table for the full adder can actually be expressed as 2 equations, one for each of the output bits. Here is the first one, where an input with a bar on top means the input is negated (e.g. <img src="https://render.githubusercontent.com/render/math?math=\bar{A} = NOT A">):
 
+<img src="https://render.githubusercontent.com/render/math?math=C_{OUT} = \bar{A}BC_{IN} %2B A\bar{B}C_{IN} %2B AB\bar{C_{IN}} %2B ABC_{IN}">
 
+What does this all mean? Let's take it apart:
+1. C<sub>OUT</sub> is 1 (meaning `true`) when any of the 3-input exressions are 1.    
+2. The equations is built out of OR-ed 3-input expressions. The equation can be read as X OR Y OR Z or W.  
+3. Each 3-intput expression is composed of 3 AND-ed variables. An expression can be read as U AND S AND T.   
+4. The 3-input expressions are called `[<cept>]`_minterms_.  
+5. Each minterm expresses an input combination explicitly, with letters (e.g. the row <img src="https://render.githubusercontent.com/render/math?math=101"> is expressed as <img src="https://render.githubusercontent.com/render/math?math=C_{OUT} = A\bar{B}C_{IN}">).  
+6. Only the minterms which result in a 1 for the output are used in the expression. The others result in 0 and they don't matter.
 
 ##### Minimal number of gates
 [[toc](#table-of-contents)]  
+
+The raw minterm expression would be extremely wasteful of gates: 4 3-input AND gates for the minterms and then 1 4-input OR gate. Using the laws of Boolean algebra, as shown in this table, 
+
+<img src="images/boolean-laws.gif" width="300" />
+
+the expression can be reduced to just a few 2-input gates, as follows:
+
+<img src="https://render.githubusercontent.com/render/math?math=C_{OUT} = \bar{A}BC_{IN} %2B A\bar{B}C_{IN} %2B AB\bar{C_{IN}} %2B ABC_{IN}">
+<img src="https://render.githubusercontent.com/render/math?math=C_{OUT} = AB(C_{IN} %2B \bar{C_{IN}}) %2B C_{IN}(\bar{A}B %2B A\bar{B})">
+<img src="https://render.githubusercontent.com/render/math?math=C_{OUT} = AB %2B C_{IN}(A \oplus B)">
+
+We need an AND gate, an OR gate, and an XOR gate. 
+
+Note that:
+1. The AND gate expression (meaning A AND B) is written as <img src="https://render.githubusercontent.com/render/math?math=AB"> as a shorthand.  
+2. The OR gate expression (meaning A OR B) is written as <img src="https://render.githubusercontent.com/render/math?math=A %2B B"> as a shorthand.  
+3. The XOR gate equation and shorthand symbol are <img src="https://render.githubusercontent.com/render/math?math=\bar{A}B %2B A\bar{B} = A \oplus B">.  
 
 #### 2. Apply
 [[toc](#table-of-contents)]
