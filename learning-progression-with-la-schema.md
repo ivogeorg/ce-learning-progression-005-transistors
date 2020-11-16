@@ -876,20 +876,20 @@ In the [Lab Notebook](README.md):
 
 1. Link to the program from 9.2.1.  
 2. Link to demo video showing the operation of the program from 9.2.1.  
-1. Link to the program from 9.2.2.  
-2. Link to demo video showing the operation of the program from 9.2.2.  
-1. Link to the program from 9.2.3.  
-2. Link to demo video showing the operation of the program from 9.2.3.  
-1. Link to the program from 9.2.4.  
-2. Link to demo video showing the operation of the program from 9.2.4.  
-1. Link to the program from 9.2.5.  
-2. Link to demo video showing the operation of the program from 9.2.5.  
-1. Link to the program from 9.2.6.  
-2. Link to demo video showing the operation of the program from 9.2.6.  
-1. Link to the program from 9.2.7.  
-2. Link to demo video showing the operation of the program from 9.2.7.  
-1. Link to the program from 9.2.8.  
-2. Link to demo video showing the operation of the program from 9.2.8.  
+3. Link to the program from 9.2.2.  
+4. Link to demo video showing the operation of the program from 9.2.2.  
+5. Link to the program from 9.2.3.  
+6. Link to demo video showing the operation of the program from 9.2.3.  
+7. Link to the program from 9.2.4.  
+8. Link to demo video showing the operation of the program from 9.2.4.  
+9. Link to the program from 9.2.5.  
+10. Link to demo video showing the operation of the program from 9.2.5.  
+11. Link to the program from 9.2.6.  
+12. Link to demo video showing the operation of the program from 9.2.6.  
+13. Link to the program from 9.2.7.  
+14. Link to demo video showing the operation of the program from 9.2.7.  
+15. Link to the program from 9.2.8.  
+16. Link to demo video showing the operation of the program from 9.2.8.  
 
 
 ### Step 10: Full adder emulation
@@ -898,15 +898,88 @@ In the [Lab Notebook](README.md):
 #### 1. Study
 [[toc](#table-of-contents)]  
 
-- bits and pieces of the program  
+`[<lernact-rd>]`In this step we will build a full-adder emulator out of simulated gates. Here is a [demo video](https://msudenver.yuja.com/V/Video?v=2194276&node=8094867&a=289777574&autoplay=1) of our goal. And here is a program skeleton:
+```javascript
+// Example 10.1.1
+
+function AND(a : boolean, b : boolean) : boolean {
+    return a && b
+}
+
+function OR(a : boolean, b : boolean) : boolean {
+    return a || b
+}
+
+function NOT(a : boolean) : boolean {
+    return !a
+}
+
+function XOR(a : boolean, b : boolean) : boolean {
+    return (a && !b) || (!a && b)
+}
+
+function half_adder(a : boolean, b : boolean) : boolean[] {
+    return [AND(a, b), XOR(a, b)]
+}
+
+function full_adder(a : boolean, b : boolean, c_in : boolean) : boolean[] {
+
+    // YOUR WORK HERE
+    
+    return null  // you need to change this
+}
+
+
+let abc_in : boolean[][] = [
+    [false, false, false, false, true, true, true, true], // a    - column 0
+    [false, false, true, true, false, false, true, true], // b    - column 1
+    [false, true, false, true, false, true, false, true], // c_in - column 2
+]
+
+let brightness : number[] = [5, 255]
+
+function verifier(c_out : DigitalPin, s : DigitalPin) : void {
+    for (let y=0; y<abc_in[0].length; y++) {
+    
+        // YOUR WORK HERE
+    
+    }
+    // for repeating forever
+    basic.clearScreen()
+}
+
+forever(function () {
+    verifier(DigitalPin.P11, DigitalPin.P15)    
+})
+```
+Note the following:
+1. The adders return arrays of the form `[C, S]`.  
+2. `abc_in` is a 2-D array containing the input combinations.  
+3. You are given all the gate functions and can use them in your implementation.  
 
 #### 2. Apply
 [[toc](#table-of-contents)]  
 
 **TODO: Full-adder emulation program**
 
+1. `[<lernact-prac>]`Implement a static table-based (that is, without computation) full adder.  
+
+2. `[<lernact-prac>]`**[Optional challenge, max 10 extra step points]** Implement the full adder with simulated gates.  
+
 #### 3. Present
 [[toc](#table-of-contents)]  
+
+In the [programs](programs) directory:
+
+1. Add your program from 10.2.1 with filename `microbit-program-10-2-1.js`.  
+2. Add your program from 10.2.2 with filename `microbit-program-10-2-2.js`.  
+
+In the [Lab Notebook](README.md):
+
+1. Link to the program from 10.2.1.  
+2. Link to demo video showing the operation of the program from 10.2.1.  
+3. Link to the program from 10.2.2.  
+4. Link to demo video showing the operation of the program from 10.2.2.  
 
 
 ### Step 11: ALU bit slice
