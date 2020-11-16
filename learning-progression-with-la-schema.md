@@ -183,7 +183,7 @@ Sparkfun has an excellent, accessible thought thorough, [introduction to transis
 
 2. `[<lernact-disc>]`BJT transistors use their base current to control the main circuit current, whereas FET transistors only use voltage and have no base current. Which of the two types would you think more likely to be the choice for the production of integrated circuits (like processors and memory sticks), where transistors are packed very densely and close to each other?  
 
-3. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** This progression will focus on processing but we know that memory is no less important. In this discovery exercise, read and article and watch a video on the structure and operation of a 1-bit `[<cept>]`_SRAM cell_, which is usually built out of 6 `[<cept>]`[_MOSFETs_](https://en.wikipedia.org/wiki/MOSFET). SRAM is the current technology for computer main memory (aka RAM). Here are some guiding questions:
+3. `[<lernact-disc>]`**[Optional challenge, max 10 extra step points]** This progression will focus on processing but we know that memory is no less important. In this discovery exercise, read an [article](https://en.wikipedia.org/wiki/Static_random-access_memory) and watch a [video](https://www.youtube.com/watch?v=GBL28_Tw6UQ) on the structure and operation of a 1-bit `[<cept>]`_SRAM cell_, which is usually built out of 6 `[<cept>]`[_MOSFETs_](https://en.wikipedia.org/wiki/MOSFET). SRAM is the current technology for computer main memory (aka RAM). Here are some guiding questions:
    1. What is `[<cept>]`_bistability_ and why is it important for memory?  
    2. What is memory anyway?  
    3. What are the bit lines?  
