@@ -296,7 +296,8 @@ In the [Lab Notebook](README.md):
 
 Sensor front | Sensor back
 --- | ---
-<img src="images/soil-sensor-front.jpg" width="300" /> | <img src="images/soil-sensor-back.jpg" width="300" />
+<img src="images/soil-sensor-front.jpg" width="300" /> | <img src="images/soil-sensor-back.jpg" width="300" />  
+
 Notice the following:
 1. On the front, the tiny transistor, which is at the heart of the sensor.  
 2. On both sides of the transistor, there are two resistors.  
